@@ -1,6 +1,6 @@
 var infoIran = [
   {
-    email: "info@say.company",
+    email: "info@saydao.org",
     phone: "(021) 22347814",
     address: "Remote",
     linkedin: "https://www.linkedin.com/company/say-company/",

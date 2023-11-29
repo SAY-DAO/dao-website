@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
-Domain: say.company
+Domain: saydao.org
 Token: 2edf4caed3d96662c63d8c19b2601ade169f8fca294debb41c9435fab16f4496
