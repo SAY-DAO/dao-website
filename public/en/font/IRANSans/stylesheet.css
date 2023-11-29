@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "IRANSansMobile";
+  src: url("IRANSansMobile-Bold.eot");
+  src: url("IRANSansMobile-Bold.eot?#iefix") format("embedded-opentype"),
+    url("IRANSansMobile-Bold.woff2") format("woff2"),
+    url("IRANSansMobile-Bold.woff") format("woff"),
+    url("IRANSansMobile-Bold.ttf") format("truetype"),
+    url("IRANSansMobile-Bold.svg#IRANSansMobile-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSansMobile";
+  src: url("IRANSansMobile-UltraLight.eot");
+  src: url("IRANSansMobile-UltraLight.eot?#iefix") format("embedded-opentype"),
+    url("IRANSansMobile-UltraLight.woff2") format("woff2"),
+    url("IRANSansMobile-UltraLight.woff") format("woff"),
+    url("IRANSansMobile-UltraLight.ttf") format("truetype"),
+    url("IRANSansMobile-UltraLight.svg#IRANSansMobile-UltraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSansMobile";
+  src: url("IRANSansMobile-Medium.eot");
+  src: url("IRANSansMobile-Medium.eot?#iefix") format("embedded-opentype"),
+    url("IRANSansMobile-Medium.woff2") format("woff2"),
+    url("IRANSansMobile-Medium.woff") format("woff"),
+    url("IRANSansMobile-Medium.ttf") format("truetype"),
+    url("IRANSansMobile-Medium.svg#IRANSansMobile-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSansMobile";
+  src: url("IRANSansMobile-Black.eot");
+  src: url("IRANSansMobile-Black.eot?#iefix") format("embedded-opentype"),
+    url("IRANSansMobile-Black.woff2") format("woff2"),
+    url("IRANSansMobile-Black.woff") format("woff"),
+    url("IRANSansMobile-Black.ttf") format("truetype"),
+    url("IRANSansMobile-Black.svg#IRANSansMobile-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSansMobile";
+  src: url("IRANSansMobile.eot");
+  src: url("IRANSansMobile.eot?#iefix") format("embedded-opentype"),
+    url("IRANSansMobile.woff2") format("woff2"),
+    url("IRANSansMobile.woff") format("woff"),
+    url("IRANSansMobile.ttf") format("truetype"),
+    url("IRANSansMobile.svg#IRANSansMobile") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSansMobile";
+  src: url("IRANSansMobile-Light.eot");
+  src: url("IRANSansMobile-Light.eot?#iefix") format("embedded-opentype"),
+    url("IRANSansMobile-Light.woff2") format("woff2"),
+    url("IRANSansMobile-Light.woff") format("woff"),
+    url("IRANSansMobile-Light.ttf") format("truetype"),
+    url("IRANSansMobile-Light.svg#IRANSansMobile-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
