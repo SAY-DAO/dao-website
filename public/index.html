@@ -1,362 +1,254 @@
 <html lang="fa">
-  <head>
-    <meta name="enamad" content="524176" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NW3P7W4");
-    </script>
-    <!-- End Google Tag Manager -->
 
-    <title>SAY</title>
-    <!--         Meta Tags -->
+<head>
+  <meta name="enamad" content="524176" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>SAY</title>
+  <!--         Meta Tags -->
 
-    <!--         ViewPort -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--         Vendor -->
-    <link rel="stylesheet" href="style/lib/bootstrap.css" />
-    <!--         Font-->
-    <link rel="stylesheet" href="font/WebFonts/css/fontiran.css" />
-    <!--         Custom CSS-->
-    <link rel="stylesheet" href="style/style.css" />
-    <!--         Create Circles-->
-    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
-  </head>
+  <!--         ViewPort -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--         Vendor -->
+  <link rel="stylesheet" href="style/lib/bootstrap.css" />
+  <!--         Font-->
+  <link rel="stylesheet" href="font/WebFonts/css/fontiran.css" />
+  <!--         Custom CSS-->
+  <link rel="stylesheet" href="style/style.css" />
+  <!--         Create Circles-->
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-NW3P7W4");
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
 
-  <body id="Home">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NW3P7W4"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body id="Home">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3P7W4" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header -->
-    <img id="downImg" src="img/DownLoad.png" />
-    <div id="addSvgCircle"></div>
-    <!-- <div class="alert alert-info" style="direction: rtl; text-align: center; margin: 0">
+  <!-- Header -->
+  <img id="downImg" src="img/DownLoad.png" />
+  <div id="addSvgCircle"></div>
+  <!-- <div class="alert alert-info" style="direction: rtl; text-align: center; margin: 0">
       <strong>لطفا در جریان باشید:</strong>
       <span> با توجه به اتفاقات اخیر ایران عزیز، در حال انتقال تمام سرویس‌ها به داخل کشور هستیم و به این دلیل دسترسی‌ها تا چند روز محدود خواهد بود. از همراهی شما پیشاپیش متشکریم. </span>
     </div> -->
-    <section class="container" id="Header">
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-        <a id="logoresponsive" class="navbar-brand" href="index.html">
-          <img src="img/logo.svg" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <section class="container" id="Header">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+      <a id="logoresponsive" class="navbar-brand" href="index.html">
+        <img src="img/logo.svg" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li id="langresponsive">
-              <a href="en/index.html">EN</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html"
-                >خانه<span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="whatis.html">اول سلام</a>
-            </li>
-            <!-- <li class="nav-item ">-->
-            <!--                        <a class="nav-link" href="whatis.html" >بلاگ </a>-->
-            <!--                    </li>-->
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">درباره ما</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">ارتباط با ما</a>
-            </li>
-            <a class="nav-link" href="https://docs.saydao.org" target="_blank"
-              >مستندات</a
-            >
-            <li class="nav-item">
-              <div class="btn-group">
-                <button
-                  class="dropdown-toggle btn nav-btn"
-                  type="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  اپلیکیشن
-                </button>
-                <div class="dropdown-menu">
-                  <!-- <a class="dropdown-item" target="_blank" href="https://sayapp.company">SAY APP</a> -->
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://dapp.saydao.org"
-                    style="text-align: center"
-                    >دپلیکیشن <sub>(نسخه دوم)</sub></a
-                  >
-                </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li id="langresponsive">
+            <a href="en/index.html">EN</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">خانه<span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="whatis.html">اول سلام</a>
+          </li>
+          <!-- <li class="nav-item ">-->
+          <!--                        <a class="nav-link" href="whatis.html" >بلاگ </a>-->
+          <!--                    </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">ارتباط با ما</a>
+          </li>
+          <a class="nav-link" href="https://docs.saydao.org" target="_blank">مستندات</a>
+          <li class="nav-item">
+            <div class="btn-group">
+              <button class="dropdown-toggle btn nav-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                اپلیکیشن
+              </button>
+              <div class="dropdown-menu">
+                <!-- <a class="dropdown-item" target="_blank" href="https://sayapp.company">SAY APP</a> -->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" target="_blank" href="https://dapp.saydao.org"
+                  style="text-align: center">دپلیکیشن <sub>(نسخه دوم)</sub></a>
               </div>
-            </li>
-            <li id="lang">
-              <a href="en/index.html">EN</a>
-            </li>
-          </ul>
-        </div>
-        <a id="logo" class="navbar-brand" href="index.html">
-          <img src="img/logo.svg" alt="" />
-        </a>
-      </nav>
-    </section>
+            </div>
+          </li>
+          <li id="lang">
+            <a href="en/index.html">EN</a>
+          </li>
+        </ul>
+      </div>
+      <a id="logo" class="navbar-brand" href="index.html">
+        <img src="img/logo.svg" alt="" />
+      </a>
+    </nav>
+  </section>
 
-    <!-- Top -->
+  <!-- Top -->
 
-    <section class="container" id="slider">
-      <div class="row">
-        <div class="col col-md-6 col-sm-12 illust">
-          <img src="img/top.png" alt="" />
-        </div>
-        <div class="col col-md-6 col-sm-12 text">
-          <h6 class="upTitle">صدایی که به گوش شما می‌رسد واقعی است</h6>
+  <section class="container" id="slider">
+    <div class="row">
+      <div class="col col-md-6 col-sm-12 illust">
+        <img src="img/top.png" alt="" />
+      </div>
+      <div class="col col-md-6 col-sm-12 text">
+        <h6 class="upTitle">صدایی که به گوش شما می‌رسد واقعی است</h6>
 
-          <h2 class="title">بنیان بنیادی</h2>
-          <h2 class="title2">برای امید و آسودگی</h2>
+        <h2 class="title">بنیان بنیادی</h2>
+        <h2 class="title2">برای امید و آسودگی</h2>
 
-          <div class="mouse">
-            <img id="goToNext" src="img/mouse.png" alt="SAY Illustration" />
-          </div>
+        <div class="mouse">
+          <img id="goToNext" src="img/mouse.png" alt="SAY Illustration" />
         </div>
       </div>
-      <div id="graph_butt_div" style="text-align: center">
-        <a href="#report">
-          <button
-            id="graphbutton"
-            type="button"
-            class="primary btn btn-outline-warning"
-          >
-            گزارش هفتگی
-          </button>
-        </a>
-        <!-- <a href="https://gitcoin.co/grants/4181/say-dao" target="_blank">
+    </div>
+    <div id="graph_butt_div" style="text-align: center">
+      <a href="#report">
+        <button id="graphbutton" type="button" class="primary btn btn-outline-warning">
+          گزارش هفتگی
+        </button>
+      </a>
+      <!-- <a href="https://gitcoin.co/grants/4181/say-dao" target="_blank">
         <button id="dappbutton" type="button" class="primary btn btn-outline-warning DAO-button">
           SAY DAO
         </button>
       </a> -->
+    </div>
+  </section>
+
+  <!-- Featuers -->
+
+  <section class="container" id="features">
+    <div class="row justify-content-md-center SectionHead">
+      <div class="col-12">
+        <h6 class="sectionUpTitle text-center">چرا SAY</h6>
+        <h3 class="sectionTilte">هم‌راه شویم تا . . .</h3>
       </div>
-    </section>
+    </div>
 
-    <!-- Featuers -->
-
-    <section class="container" id="features">
-      <div class="row justify-content-md-center SectionHead">
-        <div class="col-12">
-          <h6 class="sectionUpTitle text-center">چرا SAY</h6>
-          <h3 class="sectionTilte">هم‌راه شویم تا . . .</h3>
-        </div>
+    <div class="row">
+      <div class="col col-md-4 col-sm-12 feature">
+        <img src="img/kpi/wishes.png" alt="آرزوها واقعی شوند" />
+        <span class="featureTitle">آرزوها واقعی شوند</span>
+        <p class="featuresDesc">
+          با همکاری مددکاران برجسته فهرست دقیقی از نیازهای کودکان – از دارو تا
+          تحصیلات – تهیه کرده‌ایم تا کاربران انتخاب کنند چگونه کمک کنند.
+        </p>
       </div>
 
-      <div class="row">
-        <div class="col col-md-4 col-sm-12 feature">
-          <img src="img/kpi/wishes.png" alt="آرزوها واقعی شوند" />
-          <span class="featureTitle">آرزوها واقعی شوند</span>
-          <p class="featuresDesc">
-            با همکاری مددکاران برجسته فهرست دقیقی از نیازهای کودکان – از دارو تا
-            تحصیلات – تهیه کرده‌ایم تا کاربران انتخاب کنند چگونه کمک کنند.
-          </p>
-        </div>
-
-        <div class="col col-md-4 col-sm-12 feature">
-          <img src="img/kpi/rights.png" alt="حقوق کودکان دیده شود" />
-          <span class="featureTitle">حقوق کودکان دیده شود</span>
-          <p class="featuresDesc">
-            با باور داشتن به زیبایی‌های منحصر به فرد هر کودک، SAY می‌تواند از
-            حقوق کودکان طبق پیمان‌نامه حقوق کودک سازمان ملل دفاع کند.
-          </p>
-        </div>
-
-        <div class="col col-md-4 col-sm-12 feature">
-          <img src="img/kpi/touchlife.png" alt="در مجاورت زندگی باشیم" />
-          <span class="featureTitle">در مجاورت زندگی باشیم </span>
-          <p class="featuresDesc">
-            با SAY مشارکت کنندگان می‌توانند تاثیر مستقیم کمکشان را بر کودک خاص
-            تحت حمایتشان ارزیابی کنند.
-          </p>
-        </div>
-
-        <div class="col col-md-4 col-sm-12 feature">
-          <img src="img/kpi/transparent.png" alt="حفظ شفافیت مالی" />
-          <span class="featureTitle">حفظ شفافیت مالی</span>
-          <p class="featuresDesc">
-            تمام اقلام فراهم شده به دست سازمان‌های مردم نهاد (NGO) مشخص است و
-            خریدها با تکنولوژی بلاکچین قابل ردیابی است.
-          </p>
-        </div>
-
-        <div class="col col-md-4 col-sm-12 feature">
-          <img src="img/kpi/match-making.png" alt="کسی که کودکی ما است" />
-          <span class="featureTitle">کسی که کودکی ما است</span>
-          <span class="featureTitle">( این قابلیت در حال حاضر وجود ندارد)</span>
-          <p class="featuresDesc">
-            با SAY Brain کاربران می‌توانند سرپرست کودکانی شبیه به خودشان شوند تا
-            با کمک خانواده (مجازی)، کودکان کودکی شادمانه‌تری پشت‌سر بگذارند.
-          </p>
-        </div>
-
-        <div class="col col-md-4 col-sm-12 feature">
-          <img
-            src="img/kpi/vr-family.png"
-            alt="کودکان واقعی، خانواده‌های مجازی داشته باشند"
-          />
-          <span class="featureTitle"
-            >کودکان واقعی، خانواده‌های مجازی داشته باشند</span
-          >
-          <p class="featuresDesc">
-            با SAY کاربران می‌توانند برای کودکان جهان واقعی خانواده‌ای مجازی
-            بسازند، خانواده‌ای بزرگ که بتواند حمایت و مراقبت کافی را برای کودک
-            ایجاد کند.
-          </p>
-        </div>
+      <div class="col col-md-4 col-sm-12 feature">
+        <img src="img/kpi/rights.png" alt="حقوق کودکان دیده شود" />
+        <span class="featureTitle">حقوق کودکان دیده شود</span>
+        <p class="featuresDesc">
+          با باور داشتن به زیبایی‌های منحصر به فرد هر کودک، SAY می‌تواند از
+          حقوق کودکان طبق پیمان‌نامه حقوق کودک سازمان ملل دفاع کند.
+        </p>
       </div>
-    </section>
 
-    <!-- Download -->
-
-    <section class="container" id="download">
-      <div class="row justify-content-md-center">
-        <div class="col col-md-8 col-sm-12">
-          <div class="appPointCircle">
-            <img class="mobile" src="img/mobile.png" alt="" />
-            <img class="video" src="img/flow.webp" alt="" />
-
-            <div class="appPointLeft left1">
-              <p class="appPointDesc">
-                با استفاده از SAY در زندگی کودکان جهان تاثیرگذار باشید.
-              </p>
-              <div class="appPointIconWrapper">
-                <img src="img/feature/affect.svg" alt="" />
-              </div>
-            </div>
-            <div class="appPointLeft left2">
-              <p class="appPointDesc">
-                آواتارهای انحصاری SAY الهام گرفته شده از زندگی واقعی کودکان است.
-              </p>
-              <div class="appPointIconWrapper">
-                <img src="img/feature/avatar.svg" alt="" />
-              </div>
-            </div>
-            <div class="appPointLeft left3">
-              <p class="appPointDesc">
-                انتخاب کنید که چگونه می‌خواهید هم‌راه کودکان باشید.
-              </p>
-              <div class="appPointIconWrapper">
-                <img src="img/feature/donate.svg" alt="" />
-              </div>
-            </div>
-
-            <div class="appPointRight right1">
-              <div class="appPointIconWrapper">
-                <img src="img/feature/commu.svg" alt="" />
-              </div>
-              <p class="appPointDesc">
-                در SAY جامعه دوستی انحصاری خود را به شکلی که دوست دارید ایجاد
-                کنید.
-              </p>
-            </div>
-            <div class="appPointRight right2">
-              <div class="appPointIconWrapper">
-                <img src="img/feature/good.svg" alt="" />
-              </div>
-              <p class="appPointDesc">
-                در خانواده‌های SAY پدر، مادر یا هر نقش دیگری را انتخاب کنید.
-              </p>
-            </div>
-            <div class="appPointRight right3">
-              <div class="appPointIconWrapper">
-                <img src="img/feature/famillytree.svg" alt="" />
-              </div>
-              <p class="appPointDesc">
-                SAY صدای واقعی کودکان را به گوش شما می‌رساند.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="col col-md-4 col-sm-12 feature">
+        <img src="img/kpi/touchlife.png" alt="در مجاورت زندگی باشیم" />
+        <span class="featureTitle">در مجاورت زندگی باشیم </span>
+        <p class="featuresDesc">
+          با SAY مشارکت کنندگان می‌توانند تاثیر مستقیم کمکشان را بر کودک خاص
+          تحت حمایتشان ارزیابی کنند.
+        </p>
       </div>
-      <a href="https://dapp.saydao.org/"
-        ><button id="downloadapp" type="submit" class="primary">ورود</button></a
-      >
-    </section>
 
-    <section class="container hide" id="downloadResponsive">
-      <div class="row">
-        <div class="col-sm-12">
-          <img class="frame" src="img/mobile.png" alt="" />
+      <div class="col col-md-4 col-sm-12 feature">
+        <img src="img/kpi/transparent.png" alt="حفظ شفافیت مالی" />
+        <span class="featureTitle">حفظ شفافیت مالی</span>
+        <p class="featuresDesc">
+          تمام اقلام فراهم شده به دست سازمان‌های مردم نهاد (NGO) مشخص است و
+          خریدها با تکنولوژی بلاکچین قابل ردیابی است.
+        </p>
+      </div>
+
+      <div class="col col-md-4 col-sm-12 feature">
+        <img src="img/kpi/match-making.png" alt="کسی که کودکی ما است" />
+        <span class="featureTitle">کسی که کودکی ما است</span>
+        <span class="featureTitle">( این قابلیت در حال حاضر وجود ندارد)</span>
+        <p class="featuresDesc">
+          با SAY Brain کاربران می‌توانند سرپرست کودکانی شبیه به خودشان شوند تا
+          با کمک خانواده (مجازی)، کودکان کودکی شادمانه‌تری پشت‌سر بگذارند.
+        </p>
+      </div>
+
+      <div class="col col-md-4 col-sm-12 feature">
+        <img src="img/kpi/vr-family.png" alt="کودکان واقعی، خانواده‌های مجازی داشته باشند" />
+        <span class="featureTitle">کودکان واقعی، خانواده‌های مجازی داشته باشند</span>
+        <p class="featuresDesc">
+          با SAY کاربران می‌توانند برای کودکان جهان واقعی خانواده‌ای مجازی
+          بسازند، خانواده‌ای بزرگ که بتواند حمایت و مراقبت کافی را برای کودک
+          ایجاد کند.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+
+  <section class="container" id="download">
+    <div class="row justify-content-md-center">
+      <div class="col col-md-8 col-sm-12">
+        <div class="appPointCircle">
+          <img class="mobile" src="img/mobile.png" alt="" />
           <img class="video" src="img/flow.webp" alt="" />
-          <!-- <video width="268" height="auto" autoplay >
-                <source src="img/flow.mp4" type="video/mp4">
-            </video> -->
-          <!--<img class="video" src="img/loading-jadid.gif" alt="">-->
-        </div>
-        <div class="col-sm-12">
-          <a href="#">
-            <button id="downloadapp2" type="submit" class="primary">
-              ورود
-            </button></a
-          >
 
-          <div class="appPoint">
-            <div class="appPointIconWrapper">
-              <img src="img/feature/avatar.svg" alt="" />
-            </div>
-            <p class="appPointDesc">
-              آواتارهای انحصاری SAY الهام گرفته شده از زندگی واقعی کودکان است.
-            </p>
-          </div>
-          <div class="appPoint">
-            <div class="appPointIconWrapper">
-              <img src="img/feature/affect.svg" alt="" />
-            </div>
+          <div class="appPointLeft left1">
             <p class="appPointDesc">
               با استفاده از SAY در زندگی کودکان جهان تاثیرگذار باشید.
             </p>
-          </div>
-          <div class="appPoint">
             <div class="appPointIconWrapper">
-              <img src="img/feature/donate.svg" alt="" />
+              <img src="img/feature/affect.svg" alt="" />
             </div>
+          </div>
+          <div class="appPointLeft left2">
+            <p class="appPointDesc">
+              آواتارهای انحصاری SAY الهام گرفته شده از زندگی واقعی کودکان است.
+            </p>
+            <div class="appPointIconWrapper">
+              <img src="img/feature/avatar.svg" alt="" />
+            </div>
+          </div>
+          <div class="appPointLeft left3">
             <p class="appPointDesc">
               انتخاب کنید که چگونه می‌خواهید هم‌راه کودکان باشید.
             </p>
+            <div class="appPointIconWrapper">
+              <img src="img/feature/donate.svg" alt="" />
+            </div>
           </div>
 
-          <div class="appPoint">
+          <div class="appPointRight right1">
             <div class="appPointIconWrapper">
               <img src="img/feature/commu.svg" alt="" />
             </div>
             <p class="appPointDesc">
-              جامعه دوستی انحصاری خود را در SAY به شکلی که دوست دارید ایجاد
+              در SAY جامعه دوستی انحصاری خود را به شکلی که دوست دارید ایجاد
               کنید.
             </p>
           </div>
-          <div class="appPoint">
+          <div class="appPointRight right2">
             <div class="appPointIconWrapper">
               <img src="img/feature/good.svg" alt="" />
             </div>
@@ -364,7 +256,7 @@
               در خانواده‌های SAY پدر، مادر یا هر نقش دیگری را انتخاب کنید.
             </p>
           </div>
-          <div class="appPoint">
+          <div class="appPointRight right3">
             <div class="appPointIconWrapper">
               <img src="img/feature/famillytree.svg" alt="" />
             </div>
@@ -374,314 +266,317 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <a href="https://dapp.saydao.org/"><button id="downloadapp" type="submit" class="primary">ورود</button></a>
+  </section>
 
-    <!-- Testimonial -->
-
-    <section class="container" id="testimonial">
-      <div id="testi" class="row justify-content-md-center SectionHead">
-        <div id="titleoftesti" class="col-12">
-          <h6 class="sectionUpTitle text-center">نگاه دیگران</h6>
-          <h3 class="sectionTilte">راه‌کاری برای جهانی دوستانه‌تر</h3>
-        </div>
+  <section class="container hide" id="downloadResponsive">
+    <div class="row">
+      <div class="col-sm-12">
+        <img class="frame" src="img/mobile.png" alt="" />
+        <img class="video" src="img/flow.webp" alt="" />
+        <!-- <video width="268" height="auto" autoplay >
+                <source src="img/flow.mp4" type="video/mp4">
+            </video> -->
+        <!--<img class="video" src="img/loading-jadid.gif" alt="">-->
       </div>
+      <div class="col-sm-12">
+        <a href="#">
+          <button id="downloadapp2" type="submit" class="primary">
+            ورود
+          </button></a>
 
-      <div id="ppl" class="row justify-content-md-center">
-        <div class="col col-8 testi">
-          <h5 id="testiName"></h5>
-          <h6 id="testiPosition"></h6>
-          <p id="testiBody"></p>
-        </div>
-      </div>
-      <a
-        id="left1"
-        class="left1 testi-link"
-        href="#testimonial"
-        data-select="left1"
-        ><img src="img/testi/tom.png"
-      /></a>
-      <a
-        id="left2"
-        class="left2 testi-link"
-        href="#testimonial"
-        data-select="left2"
-      >
-        <img src="img/testi/george.png"
-      /></a>
-
-      <a
-        id="right1"
-        class="right1 testi-link"
-        href="#testimonial"
-        data-select="right1"
-      >
-        <img src="img/testi/araabi.png"
-      /></a>
-      <a
-        id="right2"
-        class="right2 testi-link"
-        href="#testimonial"
-        data-select="right2"
-      >
-        <img src="img/testi/olivia.png"
-      /></a>
-    </section>
-
-    <!-- Testimonial Responsive Bootstrap -->
-
-    <div id="carousel" class="container mt-3">
-      <div class="row justify-content-md-center SectionHead">
-        <div id="car" class="col-12">
-          <h6 class="sectionUpTitle text-center">نگاه دیگران</h6>
-          <h3 class="sectionTilte">راه‌کاری برای جهانی دوستانه‌تر</h3>
-        </div>
-      </div>
-      <div id="myCarousel">
-        <div
-          id="demo"
-          class="carousel slide"
-          data-ride="carousel"
-          data-interval="30000"
-        >
-          <!-- Indicators -->
-          <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
-            <li data-target="#demo" data-slide-to="3"></li>
-          </ul>
-
-          <!-- The slideshow -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="testipic" src="img/testi/tom.png" />
-              <h5 class="testissnames">تام سیرئون</h5>
-              <h6 class="testisposs">اداره‌کننده فاندر اینستیتوت در برلین</h6>
-              <p width="1100">
-                من تحت تاثیر ایده‌ی خانواده‌های مجازی قرار گرفتم که می‌توانند
-                سرپرستی هر کودکی را به عهده بگیرند و تمام این‌ها بخشی از SAY
-                است. من فکر می‌کنم شما کار خارق‌العاده‌ای انجام می‌دهید و تمام
-                سازمان‌های انسان دوستانه باید بتوانند خصوصی‌تر، غیر سازمانی،
-                قابل اعتماد و مستقل کار کنند.
-              </p>
-            </div>
-            <div class="carousel-item">
-              <img class="testipic" src="img/testi/araabi.png" />
-              <h5 class="testissnames">مینو اعرابی</h5>
-              <h6 class="testisposs">هیئت مدیره انجمن حمایت از حقوق کودک</h6>
-              <p width="1100">
-                من یکی از اعضای کوچک خانواده حمایت از حقوق کودکان‌ام و این
-                انتخاب من بوده تا بتوانم در جهانی که روز به روز در حال گسترش است
-                سهمی برای بهتر شدن داشته باشم اما من و این خانواده کوچک هیچ وقت
-                کافی نبودند، کافی نبود تا بتوانیم از همه‌ی کودکانی که نیاز به
-                حمایت دارند حمایت کنیم تا این که به لطف احسان با SAY آشنا و
-                بسیار هیجان زده شدم. SAY راه‌کاری برای جهانی دوستانه‌تر و حمایت
-                از کسانی است که ما باید از آنان حمایت کنیم. با SAY دنیایی که در
-                عین دسترسی‌های بسیار به همه‌چیز، دسترسی کودکان‌ نیازمند حمایت‌اش
-                هر روز به جای کم شدن بسیار بیش‌تر می‌شود.
-              </p>
-            </div>
-            <div class="carousel-item">
-              <img class="testipic" src="img/testi/george.png" />
-              <h5 class="testissnames">جورج کوتنر</h5>
-              <h6 class="testisposs">تیم مدیریت استارت‌آپ لایو در زاگرب</h6>
-              <p width="1100">
-                اولین بار در یکی از برنامه‌های استارت‌آپ لایو در زاگرب با SAY
-                آشنا شدم و بلافاصله تحت تاثیر مفهوم آن قرار گرفتم. SAY این
-                پتانسیل را دارد که تاثیری عظیم روی جامعه ما بگذارد و به این دلیل
-                ما باید از آن پشتیبانی کنیم.
-              </p>
-            </div>
-            <div class="container carousel-item">
-              <img class="testipic" src="img/testi/olivia.png" /><br />
-              <h5 class="testissnames">اولیویا چتورتینسکی</h5>
-              <h6 class="testisposs">اداره‌کننده فاندر اینستیتوت در برلین</h6>
-              <p width="1100">
-                همه می‌خواهند جهان را تبدیل به جای بهتری برای زندگی کنند اما
-                همیشه مشکل ارتباط روزمره و ابتکارِ عمل وجود دارد. ما به خیریه‌ها
-                کمک می‌کنیم اما در حقیقت نمی‌دانیم چه اتفاقی برای پولی که اهدا
-                کرده‌ایم می‌افتد و به دست چه کسی می‌رسد؟ وقتی احسان را برای
-                اولین بار دیدم – که در فاندر اینستیتوت و در برلین در حال سخنرانی
-                بود – کشف کردم که چگونه SAY راه‌کاری خلاقانه و درهم گسیخته برای
-                کمک به نیازهای کودکان است. SAY فرصتی است برای ما که در شخصی‌ترین
-                شکلِ ممکن با دریافت کننده‌ی هر کمک مواجه شویم و در عین حال
-                استفاده از تکنولوژی بلاک-چین سبب شفافیت و وضوح بیشتری می‌شود.
-                SAY انجمن‌های انسان دوستانه را به مرحله تازه‌ای هدایت می‌کند و
-                من در انتظار روزی هستم که بتوان از آن استفاده کرد.
-              </p>
-            </div>
+        <div class="appPoint">
+          <div class="appPointIconWrapper">
+            <img src="img/feature/avatar.svg" alt="" />
           </div>
+          <p class="appPointDesc">
+            آواتارهای انحصاری SAY الهام گرفته شده از زندگی واقعی کودکان است.
+          </p>
+        </div>
+        <div class="appPoint">
+          <div class="appPointIconWrapper">
+            <img src="img/feature/affect.svg" alt="" />
+          </div>
+          <p class="appPointDesc">
+            با استفاده از SAY در زندگی کودکان جهان تاثیرگذار باشید.
+          </p>
+        </div>
+        <div class="appPoint">
+          <div class="appPointIconWrapper">
+            <img src="img/feature/donate.svg" alt="" />
+          </div>
+          <p class="appPointDesc">
+            انتخاب کنید که چگونه می‌خواهید هم‌راه کودکان باشید.
+          </p>
+        </div>
 
-          <!-- Left and right controls -->
-          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <img id="leftarrow" src="img/next2.svg" />
-          </a>
-          <a class="carousel-control-next" href="#demo" data-slide="next">
-            <img id="rightarrow" src="img/next2.svg" />
-          </a>
+        <div class="appPoint">
+          <div class="appPointIconWrapper">
+            <img src="img/feature/commu.svg" alt="" />
+          </div>
+          <p class="appPointDesc">
+            جامعه دوستی انحصاری خود را در SAY به شکلی که دوست دارید ایجاد
+            کنید.
+          </p>
+        </div>
+        <div class="appPoint">
+          <div class="appPointIconWrapper">
+            <img src="img/feature/good.svg" alt="" />
+          </div>
+          <p class="appPointDesc">
+            در خانواده‌های SAY پدر، مادر یا هر نقش دیگری را انتخاب کنید.
+          </p>
+        </div>
+        <div class="appPoint">
+          <div class="appPointIconWrapper">
+            <img src="img/feature/famillytree.svg" alt="" />
+          </div>
+          <p class="appPointDesc">
+            SAY صدای واقعی کودکان را به گوش شما می‌رساند.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+
+  <section class="container" id="testimonial">
+    <div id="testi" class="row justify-content-md-center SectionHead">
+      <div id="titleoftesti" class="col-12">
+        <h6 class="sectionUpTitle text-center">نگاه دیگران</h6>
+        <h3 class="sectionTilte">راه‌کاری برای جهانی دوستانه‌تر</h3>
+      </div>
+    </div>
+
+    <div id="ppl" class="row justify-content-md-center">
+      <div class="col col-8 testi">
+        <h5 id="testiName"></h5>
+        <h6 id="testiPosition"></h6>
+        <p id="testiBody"></p>
+      </div>
+    </div>
+    <a id="left1" class="left1 testi-link" href="#testimonial" data-select="left1"><img src="img/testi/tom.png" /></a>
+    <a id="left2" class="left2 testi-link" href="#testimonial" data-select="left2">
+      <img src="img/testi/george.png" /></a>
+
+    <a id="right1" class="right1 testi-link" href="#testimonial" data-select="right1">
+      <img src="img/testi/araabi.png" /></a>
+    <a id="right2" class="right2 testi-link" href="#testimonial" data-select="right2">
+      <img src="img/testi/olivia.png" /></a>
+  </section>
+
+  <!-- Testimonial Responsive Bootstrap -->
+
+  <div id="carousel" class="container mt-3">
+    <div class="row justify-content-md-center SectionHead">
+      <div id="car" class="col-12">
+        <h6 class="sectionUpTitle text-center">نگاه دیگران</h6>
+        <h3 class="sectionTilte">راه‌کاری برای جهانی دوستانه‌تر</h3>
+      </div>
+    </div>
+    <div id="myCarousel">
+      <div id="demo" class="carousel slide" data-ride="carousel" data-interval="30000">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="testipic" src="img/testi/tom.png" />
+            <h5 class="testissnames">تام سیرئون</h5>
+            <h6 class="testisposs">اداره‌کننده فاندر اینستیتوت در برلین</h6>
+            <p width="1100">
+              من تحت تاثیر ایده‌ی خانواده‌های مجازی قرار گرفتم که می‌توانند
+              سرپرستی هر کودکی را به عهده بگیرند و تمام این‌ها بخشی از SAY
+              است. من فکر می‌کنم شما کار خارق‌العاده‌ای انجام می‌دهید و تمام
+              سازمان‌های انسان دوستانه باید بتوانند خصوصی‌تر، غیر سازمانی،
+              قابل اعتماد و مستقل کار کنند.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <img class="testipic" src="img/testi/araabi.png" />
+            <h5 class="testissnames">مینو اعرابی</h5>
+            <h6 class="testisposs">هیئت مدیره انجمن حمایت از حقوق کودک</h6>
+            <p width="1100">
+              من یکی از اعضای کوچک خانواده حمایت از حقوق کودکان‌ام و این
+              انتخاب من بوده تا بتوانم در جهانی که روز به روز در حال گسترش است
+              سهمی برای بهتر شدن داشته باشم اما من و این خانواده کوچک هیچ وقت
+              کافی نبودند، کافی نبود تا بتوانیم از همه‌ی کودکانی که نیاز به
+              حمایت دارند حمایت کنیم تا این که به لطف احسان با SAY آشنا و
+              بسیار هیجان زده شدم. SAY راه‌کاری برای جهانی دوستانه‌تر و حمایت
+              از کسانی است که ما باید از آنان حمایت کنیم. با SAY دنیایی که در
+              عین دسترسی‌های بسیار به همه‌چیز، دسترسی کودکان‌ نیازمند حمایت‌اش
+              هر روز به جای کم شدن بسیار بیش‌تر می‌شود.
+            </p>
+          </div>
+          <div class="carousel-item">
+            <img class="testipic" src="img/testi/george.png" />
+            <h5 class="testissnames">جورج کوتنر</h5>
+            <h6 class="testisposs">تیم مدیریت استارت‌آپ لایو در زاگرب</h6>
+            <p width="1100">
+              اولین بار در یکی از برنامه‌های استارت‌آپ لایو در زاگرب با SAY
+              آشنا شدم و بلافاصله تحت تاثیر مفهوم آن قرار گرفتم. SAY این
+              پتانسیل را دارد که تاثیری عظیم روی جامعه ما بگذارد و به این دلیل
+              ما باید از آن پشتیبانی کنیم.
+            </p>
+          </div>
+          <div class="container carousel-item">
+            <img class="testipic" src="img/testi/olivia.png" /><br />
+            <h5 class="testissnames">اولیویا چتورتینسکی</h5>
+            <h6 class="testisposs">اداره‌کننده فاندر اینستیتوت در برلین</h6>
+            <p width="1100">
+              همه می‌خواهند جهان را تبدیل به جای بهتری برای زندگی کنند اما
+              همیشه مشکل ارتباط روزمره و ابتکارِ عمل وجود دارد. ما به خیریه‌ها
+              کمک می‌کنیم اما در حقیقت نمی‌دانیم چه اتفاقی برای پولی که اهدا
+              کرده‌ایم می‌افتد و به دست چه کسی می‌رسد؟ وقتی احسان را برای
+              اولین بار دیدم – که در فاندر اینستیتوت و در برلین در حال سخنرانی
+              بود – کشف کردم که چگونه SAY راه‌کاری خلاقانه و درهم گسیخته برای
+              کمک به نیازهای کودکان است. SAY فرصتی است برای ما که در شخصی‌ترین
+              شکلِ ممکن با دریافت کننده‌ی هر کمک مواجه شویم و در عین حال
+              استفاده از تکنولوژی بلاک-چین سبب شفافیت و وضوح بیشتری می‌شود.
+              SAY انجمن‌های انسان دوستانه را به مرحله تازه‌ای هدایت می‌کند و
+              من در انتظار روزی هستم که بتوان از آن استفاده کرد.
+            </p>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <img id="leftarrow" src="img/next2.svg" />
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <img id="rightarrow" src="img/next2.svg" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report -->
+  <section class="container" id="report">
+    <div class="row justify-content-md-center SectionHead">
+      <div id="graphs" class="col-12">
+        <h6 class="sectionUpTitle text-center">همه باید بدانند</h6>
+        <h3 class="sectionTilte">گزارش‌های هفتگی</h3>
+      </div>
+    </div>
+    <div id="graph_container" class="container col-10">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" id="myTabs" role="tablist">
+        <li class="nav-item active">
+          <a class="nav-link active" href="#cumulative-needs" data-toggle="tab">نیاز‌ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#payment" data-toggle="tab">پرداخت‌ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#need" data-toggle="tab">نیاز‌ هر هفته</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="container tab-content">
+        <div class="container tab-pane active" id="cumulative-needs">
+          <br />
+          <p>نموداری که می‌بینید مجموع نیاز‌های اضافه شده و کامل شده است.</p>
+          <iframe class="container"
+            src="https://metabase.say.company/public/question/7c06bf2f-62ad-433d-be0a-a1783845101c" frameborder="0"
+            width="100%" height="400" allowtransparency>
+          </iframe>
+        </div>
+        <div class="container tab-pane" id="payment">
+          <br />
+          <p>
+            نموداری که می‌بینید مجموع مبالغ پرداخت شده توسط خانواده‌های است که
+            برای خرید کالا یا خدمات کودکان‌شان هزینه شده است. SAY از هر خرید
+            از ۰ تا ۱۵ درصد از فروشنده کالا درآمد همکاری فروش دریافت میکند.
+            نمودار دومی که می‌بینید همچنین درآمد SAY است که از طریق Donation
+            مستقیم کاربران دریافت شده است.
+          </p>
+          <iframe class="container"
+            src="https://metabase.say.company/public/question/e38f078e-d04b-4ef8-8a67-1ce23fa907f6" frameborder="0"
+            width="100%" height="400" allowtransparency>
+          </iframe>
+        </div>
+
+        <div class="container tab-pane fade" id="need">
+          <br />
+          <p>
+            نموداری که می‌بینید مجموع نیازهای کامل شده برای کودکانی واقعی در
+            هر هفته است.
+          </p>
+          <iframe class="container"
+            src="https://metabase.say.company/public/question/913bba6e-f854-4c6d-9e13-abc9b4ca056b" frameborder="0"
+            width="100%" height="400" allowtransparency>
+          </iframe>
         </div>
       </div>
     </div>
 
-    <!-- Report -->
-    <section class="container" id="report">
-      <div class="row justify-content-md-center SectionHead">
-        <div id="graphs" class="col-12">
-          <h6 class="sectionUpTitle text-center">همه باید بدانند</h6>
-          <h3 class="sectionTilte">گزارش‌های هفتگی</h3>
+    <!--    Report Responsive-->
+
+    <div id="graph_container2" class="container col-12">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" id="myTabs2" role="tablist">
+        <li class="nav-item active">
+          <a class="nav-link active" href="#cumulative-needs2" data-toggle="tab">پرداخت‌ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#payment2" data-toggle="tab">پرداخت‌ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#need2" data-toggle="tab">نیاز‌ها</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="container tab-content">
+        <div class="container tab-pane active" id="cumulative-needs2">
+          <br />
+          <p>نموداری که می‌بینید مجموع نیاز‌های اضافه شده و کامل شده است.</p>
+          <iframe class="container"
+            src="https://metabase.say.company/public/question/7c06bf2f-62ad-433d-be0a-a1783845101c" frameborder="0"
+            width="100%" height="400" allowtransparency>
+          </iframe>
+        </div>
+        <div class="container tab-pane" id="payment2">
+          <br />
+          <p>
+            جمع مبالغ پرداخت شده برای خرید کالا یا خدمات مورد نیاز کودکان تحت
+            پوشش
+          </p>
+          <iframe class="container"
+            src="https://metabase.say.company/public/question/e38f078e-d04b-4ef8-8a67-1ce23fa907f6" frameborder="0"
+            width="100%" height="400" allowtransparency>
+          </iframe>
+        </div>
+        <div class="container tab-pane fade" id="need2">
+          <br />
+          <p>تعداد هفتگی نیاز‌های رفع شده از کودکان</p>
+
+          <iframe class="container"
+            src="https://metabase.say.company/public/question/913bba6e-f854-4c6d-9e13-abc9b4ca056b" frameborder="0"
+            width="100%" height="400" allowtransparency></iframe>
         </div>
       </div>
-      <div id="graph_container" class="container col-10">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTabs" role="tablist">
-          <li class="nav-item active">
-            <a
-              class="nav-link active"
-              href="#cumulative-needs"
-              data-toggle="tab"
-              >نیاز‌ها</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#payment" data-toggle="tab">پرداخت‌ها</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#need" data-toggle="tab">نیاز‌ هر هفته</a>
-          </li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="container tab-content">
-          <div class="container tab-pane active" id="cumulative-needs">
-            <br />
-            <p>نموداری که می‌بینید مجموع نیاز‌های اضافه شده و کامل شده است.</p>
-            <iframe
-              class="container"
-              src="https://metabase.say.company/public/question/7c06bf2f-62ad-433d-be0a-a1783845101c"
-              frameborder="0"
-              width="100%"
-              height="400"
-              allowtransparency
-            >
-            </iframe>
-          </div>
-          <div class="container tab-pane" id="payment">
-            <br />
-            <p>
-              نموداری که می‌بینید مجموع مبالغ پرداخت شده توسط خانواده‌های است که
-              برای خرید کالا یا خدمات کودکان‌شان هزینه شده است. SAY از هر خرید
-              از ۰ تا ۱۵ درصد از فروشنده کالا درآمد همکاری فروش دریافت میکند.
-              نمودار دومی که می‌بینید همچنین درآمد SAY است که از طریق Donation
-              مستقیم کاربران دریافت شده است.
-            </p>
-            <iframe
-              class="container"
-              src="https://metabase.say.company/public/question/e38f078e-d04b-4ef8-8a67-1ce23fa907f6"
-              frameborder="0"
-              width="100%"
-              height="400"
-              allowtransparency
-            >
-            </iframe>
-          </div>
+    </div>
+  </section>
 
-          <div class="container tab-pane fade" id="need">
-            <br />
-            <p>
-              نموداری که می‌بینید مجموع نیازهای کامل شده برای کودکانی واقعی در
-              هر هفته است.
-            </p>
-            <iframe
-              class="container"
-              src="https://metabase.say.company/public/question/913bba6e-f854-4c6d-9e13-abc9b4ca056b"
-              frameborder="0"
-              width="100%"
-              height="400"
-              allowtransparency
-            >
-            </iframe>
-          </div>
-        </div>
+  <!-- Subscribe -->
+
+  <section class="container" id="subscribe">
+    <img id="headsup" src="img/HeadsUp.png" />
+    <div class="row justify-content-md-center SectionHead">
+      <div class="col-12">
+        <h6 class="sectionUpTitle text-center">با ما باشید</h6>
+        <h3 class="sectionTilte">هم‌راه ما</h3>
       </div>
-
-      <!--    Report Responsive-->
-
-      <div id="graph_container2" class="container col-12">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTabs2" role="tablist">
-          <li class="nav-item active">
-            <a
-              class="nav-link active"
-              href="#cumulative-needs2"
-              data-toggle="tab"
-              >پرداخت‌ها</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#payment2" data-toggle="tab">پرداخت‌ها</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#need2" data-toggle="tab">نیاز‌ها</a>
-          </li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="container tab-content">
-          <div class="container tab-pane active" id="cumulative-needs2">
-            <br />
-            <p>نموداری که می‌بینید مجموع نیاز‌های اضافه شده و کامل شده است.</p>
-            <iframe
-              class="container"
-              src="https://metabase.say.company/public/question/7c06bf2f-62ad-433d-be0a-a1783845101c"
-              frameborder="0"
-              width="100%"
-              height="400"
-              allowtransparency
-            >
-            </iframe>
-          </div>
-          <div class="container tab-pane" id="payment2">
-            <br />
-            <p>
-              جمع مبالغ پرداخت شده برای خرید کالا یا خدمات مورد نیاز کودکان تحت
-              پوشش
-            </p>
-            <iframe
-              class="container"
-              src="https://metabase.say.company/public/question/e38f078e-d04b-4ef8-8a67-1ce23fa907f6"
-              frameborder="0"
-              width="100%"
-              height="400"
-              allowtransparency
-            >
-            </iframe>
-          </div>
-          <div class="container tab-pane fade" id="need2">
-            <br />
-            <p>تعداد هفتگی نیاز‌های رفع شده از کودکان</p>
-
-            <iframe
-              class="container"
-              src="https://metabase.say.company/public/question/913bba6e-f854-4c6d-9e13-abc9b4ca056b"
-              frameborder="0"
-              width="100%"
-              height="400"
-              allowtransparency
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Subscribe -->
-
-    <section class="container" id="subscribe">
-      <img id="headsup" src="img/HeadsUp.png" />
-      <div class="row justify-content-md-center SectionHead">
-        <div class="col-12">
-          <h6 class="sectionUpTitle text-center">با ما باشید</h6>
-          <h3 class="sectionTilte">هم‌راه ما</h3>
-        </div>
-      </div>
-      <!-- <div
+    </div>
+    <!-- <div
         id="mlb2-1401204"
         class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-1401204"
       >
@@ -799,225 +694,190 @@
           </div>
         </div>
       </div> -->
-      <script>
-        function ml_webform_success_1401204() {
-          var r = ml_jQuery || jQuery;
-          r(".ml-subscribe-form-1401204 .row-success").show(),
-            r(".ml-subscribe-form-1401204 .row-form").hide();
-        }
-      </script>
-      <img
-        src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?v1628210805"
-        width="1"
-        height="1"
-        style="
+    <script>
+      function ml_webform_success_1401204() {
+        var r = ml_jQuery || jQuery;
+        r(".ml-subscribe-form-1401204 .row-success").show(),
+          r(".ml-subscribe-form-1401204 .row-form").hide();
+      }
+    </script>
+    <img src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?v1628210805" width="1" height="1" style="
           max-width: 1px;
           max-height: 1px;
           visibility: hidden;
           padding: 0;
           margin: 0;
           display: block;
-        "
-        alt="."
-        border="0"
-      />
-      <script
-        src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
-        type="text/javascript"
-      ></script>
-      <div class="ml-form-successBody row-success" style="display: none">
-        <div class="ml-form-successContent">
-          <h4></h4>
-          <p style="text-align: center"><br /></p>
-          <p style="text-align: center">
-            <span style="font-size: 24px"> .</span
-            ><span style="font-size: 24px"
-              >ایمیل تایید همراهی برای شما ارسال شد
-            </span>
-          </p>
-          <p style="text-align: center">
-            <span style="font-size: 24px"
-              ><a href="https://say.company">say.company</a></span
-            >
-          </p>
-          <p style="text-align: center"><br /></p>
-          <p></p>
-        </div>
+        " alt="." border="0" />
+    <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c"
+      type="text/javascript"></script>
+    <div class="ml-form-successBody row-success" style="display: none">
+      <div class="ml-form-successContent">
+        <h4></h4>
+        <p style="text-align: center"><br /></p>
+        <p style="text-align: center">
+          <span style="font-size: 24px"> .</span><span style="font-size: 24px">ایمیل تایید همراهی برای شما ارسال شد
+          </span>
+        </p>
+        <p style="text-align: center">
+          <span style="font-size: 24px"><a href="https://say.company">say.company</a></span>
+        </p>
+        <p style="text-align: center"><br /></p>
+        <p></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- footer -->
-    <section class="container" id="footer">
-      <div class="row footer-data">
-        <!-- samandehi -->
-        <div class="col col-md-4">
-          <div class="row">
-            <div class="col col-md-6">
-              <img
-                id="jxlzwlaoapfufukzwlaorgvj"
-                style="cursor: pointer"
-                onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=145643&p=rfthaodsdshwgvkaaodsxlao", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
-                alt="logo-samandehi"
-                src="https://logo.samandehi.ir/logo.aspx?id=145643&p=nbpdshwlujynwlbqshwlqfti"
-              />
-            </div>
-            <div class="col col-md-6">
-              <a
-                referrerpolicy="origin"
-                target="_blank"
-                href="https://trustseal.enamad.ir/?id=123567&amp;Code=D05NW57TmlDc68YRLYkG"
-              >
-                <img
-                  referrerpolicy="origin"
-                  src="https://Trustseal.eNamad.ir/logo.aspx?id=123567&amp;Code=D05NW57TmlDc68YRLYkG"
-                  alt=""
-                  style="cursor: pointer"
-                  id="D05NW57TmlDc68YRLYkG"
-                />
-              </a>
-            </div>
+  <!-- footer -->
+  <section class="container" id="footer">
+    <div class="row footer-data">
+      <!-- samandehi -->
+      <div class="col col-md-4">
+        <div class="row">
+          <div class="col col-md-6">
+            <img id="jxlzwlaoapfufukzwlaorgvj" style="cursor: pointer"
+              onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=145643&p=rfthaodsdshwgvkaaodsxlao", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+              alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=145643&p=nbpdshwlujynwlbqshwlqfti" />
+          </div>
+          <div class="col col-md-6">
+            <a referrerpolicy="origin" target="_blank"
+              href="https://trustseal.enamad.ir/?id=123567&amp;Code=D05NW57TmlDc68YRLYkG">
+              <img referrerpolicy="origin"
+                src="https://Trustseal.eNamad.ir/logo.aspx?id=123567&amp;Code=D05NW57TmlDc68YRLYkG" alt=""
+                style="cursor: pointer" id="D05NW57TmlDc68YRLYkG" />
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Links -->
-        <div class="col col-md-4" id="links">
-          <div class="row">
-            <div class="col-md-6 link-wrapper">
-              <ul>
-                <li class="title">شبکه‌های اجتماعی</li>
-                <!-- <li class="social-media">
+      <!-- Links -->
+      <div class="col col-md-4" id="links">
+        <div class="row">
+          <div class="col-md-6 link-wrapper">
+            <ul>
+              <li class="title">شبکه‌های اجتماعی</li>
+              <!-- <li class="social-media">
                 <a href="https://www.instagram.com/say.company/">
                   <img src="img/footer/instagram.png" alt="">
                 </a>
               </li> -->
-                <li>
-                  <a href="https://github.com/SAY-DAO">
-                    <img
-                      style="width: 40%"
-                      src="img/footer/github.png"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                <!-- <li class="social-media">
+              <li>
+                <a href="https://github.com/SAY-DAO">
+                  <img style="width: 40%" src="img/footer/github.png" alt="" />
+                </a>
+              </li>
+              <!-- <li class="social-media">
                 <a href="https://www.linkedin.com/company/say-company">
                   <img src="img/footer/linkedin.png" alt="">
                 </a>
               </li> -->
-              </ul>
-            </div>
-            <div class="col-md-6 link-wrapper">
-              <ul>
-                <li class="title">لینک‌ها</li>
-                <li class="active">
-                  <a href="index.html">خانه</a>
-                </li>
-                <li>
-                  <a href="whatis.html">اول سلام</a>
-                </li>
-                <li>
-                  <a href="about.html">درباره ‌ما</a>
-                </li>
-                <li>
-                  <a href="contact.html">ارتباط‌ با ما</a>
-                </li>
-              </ul>
-            </div>
+            </ul>
           </div>
-        </div>
-
-        <!-- Footer Desc -->
-        <div class="col col-md-4" id="desc">
-          <div class="row">
-            <div class="col col-md-12 desc-wrapper">
-              <img src="img/logo.svg" alt="" />
-              <span>SAY</span><br /><br />
-              <span class="footerspan">این کودک مجازی نیست</span>
-            </div>
-            <div class="col col-md-12 desc-wrapper">
-              <p>
-                SAY استارت‌آپی ایرانی با رویکرد مسئولیت اجتماعی است تا نقطه
-                تلاقی تمام کسانی باشد که برای جهانی دوستانه‌تر تلاش می‌کنند؛ SAY
-                با استفاده از تکنولوژیِ کوتاه‌ترین فاصله بین تمام کودکان جهان و
-                جامعه‌ای آگاه خواهد بود.
-              </p>
-            </div>
+          <div class="col-md-6 link-wrapper">
+            <ul>
+              <li class="title">لینک‌ها</li>
+              <li class="active">
+                <a href="index.html">خانه</a>
+              </li>
+              <li>
+                <a href="whatis.html">اول سلام</a>
+              </li>
+              <li>
+                <a href="about.html">درباره ‌ما</a>
+              </li>
+              <li>
+                <a href="contact.html">ارتباط‌ با ما</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="row footer-copy">
-        <div class="col-md-6 col-sm-12 copy-links">
-          <div class="row">
-            <div class="col-md-3 col-sm-6 language">
-              <span>
-                <a class="active" href="en/index.html">English</a>
-                -
-                <a href="/">فارسی</a>
-              </span>
-            </div>
-            <div class="col-md-9 col-sm-6 terms">
-              <span>
-                <!-- <a href="rights.html">پیمان‌نامه حقوق کودک</a> -->
-                <!--                                    - -->
-                <!--                                    <a href="#">قوانین و مقررات </a>-->
-              </span>
-            </div>
+
+      <!-- Footer Desc -->
+      <div class="col col-md-4" id="desc">
+        <div class="row">
+          <div class="col col-md-12 desc-wrapper">
+            <img src="img/logo.svg" alt="" />
+            <span>SAY</span><br /><br />
+            <span class="footerspan">این کودک مجازی نیست</span>
+          </div>
+          <div class="col col-md-12 desc-wrapper">
+            <p>
+              SAY استارت‌آپی ایرانی با رویکرد مسئولیت اجتماعی است تا نقطه
+              تلاقی تمام کسانی باشد که برای جهانی دوستانه‌تر تلاش می‌کنند؛ SAY
+              با استفاده از تکنولوژیِ کوتاه‌ترین فاصله بین تمام کودکان جهان و
+              جامعه‌ای آگاه خواهد بود.
+            </p>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 copy-right">
-          <span
-            >کلیه حقوق این وبسایت متعلق به شرکت
-            <a href="https://pendara.co">پندارآ </a>است. © 1398
-          </span>
+      </div>
+    </div>
+    <div class="row footer-copy">
+      <div class="col-md-6 col-sm-12 copy-links">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 language">
+            <span>
+              <a class="active" href="en/index.html">English</a>
+              -
+              <a href="/">فارسی</a>
+            </span>
+          </div>
+          <div class="col-md-9 col-sm-6 terms">
+            <span>
+              <!-- <a href="rights.html">پیمان‌نامه حقوق کودک</a> -->
+              <!--                                    - -->
+              <!--                                    <a href="#">قوانین و مقررات </a>-->
+            </span>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="col-md-6 col-sm-12 copy-right">
+        <span>کلیه حقوق این وبسایت متعلق به شرکت
+          <a href="https://pendara.co">پندارآ </a>است. © 1398
+        </span>
+      </div>
+    </div>
+  </section>
 
-    <!-- Ready to use Lib -->
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/bootstrap.min.js"></script>
+  <!-- Ready to use Lib -->
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
 
-    <script src="js/Json/home/homeData.js"></script>
-    <script src="js/Json/circles.js"></script>
+  <script src="js/Json/home/homeData.js"></script>
+  <script src="js/Json/circles.js"></script>
 
-    <script src="js/JavaScript/script.js"></script>
-    <script src="js/JavaScript/home.js"></script>
+  <script src="js/JavaScript/script.js"></script>
+  <script src="js/JavaScript/home.js"></script>
 
-    <script>
-      $("#myTabs").click("show", function (e) {
-        paneID = $(e.target).attr("href");
-        src = $(paneID).attr("data-src");
-        // if the iframe hasn't already been loaded once
-        if ($(paneID + " iframe").attr("src") == "") {
-          $(paneID + " iframe").attr("src", src);
-        }
-      });
-      $("#myTabs2").click("show", function (e) {
-        paneID = $(e.target).attr("href");
-        src = $(paneID).attr("data-src");
-        // if the iframe hasn't already been loaded once
-        if ($(paneID + " iframe").attr("src") == "") {
-          $(paneID + " iframe").attr("src", src);
-        }
-      });
-    </script>
-    <img
-      src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?vd890ed88b3a28c805acc70e1a88fa27c"
-      width="1"
-      height="1"
-      style="
+  <script>
+    $("#myTabs").click("show", function (e) {
+      paneID = $(e.target).attr("href");
+      src = $(paneID).attr("data-src");
+      // if the iframe hasn't already been loaded once
+      if ($(paneID + " iframe").attr("src") == "") {
+        $(paneID + " iframe").attr("src", src);
+      }
+    });
+    $("#myTabs2").click("show", function (e) {
+      paneID = $(e.target).attr("href");
+      src = $(paneID).attr("data-src");
+      // if the iframe hasn't already been loaded once
+      if ($(paneID + " iframe").attr("src") == "") {
+        $(paneID + " iframe").attr("src", src);
+      }
+    });
+  </script>
+  <img src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?vd890ed88b3a28c805acc70e1a88fa27c" width="1"
+    height="1" style="
         max-width: 1px;
         max-height: 1px;
         visibility: hidden;
         padding: 0;
         margin: 0;
         display: block;
-      "
-      border="0"
-    />
-    <script
-      src="https://static.mailerlite.com/js/w/webforms.min.js?vd890ed88b3a28c805acc70e1a88fa27c"
-      type="text/javascript"
-    ></script>
-  </body>
+      " border="0" />
+  <script src="https://static.mailerlite.com/js/w/webforms.min.js?vd890ed88b3a28c805acc70e1a88fa27c"
+    type="text/javascript"></script>
+</body>
+
 </html>
