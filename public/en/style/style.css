@@ -97,9 +97,9 @@ body {
 /*---------------------------------- Reporting ------------------------------------*/
 #graphbutton {
   border-radius: 27px !important;
-  color: white;
+  color: black;
   border: #000000 0.5px solid;
-  background-color: rgb(91, 215, 210);
+  background-color: rgb(206 241 240);
   cursor: pointer;
   font-family: "iranyekan" !important;
   font-size: 19px !important;
