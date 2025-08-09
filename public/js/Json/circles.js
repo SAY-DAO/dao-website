@@ -97,13 +97,13 @@ var smallHomeCircle = [
   {
     r: "200",
     left: "10px",
-    top: "4450px",
+    top: "3150px",
     color: "rgb(249,219,189)",
   },
   {
     r: "300",
     left: "1306px",
-    top: "4500px",
+    top: "3800px",
     color: "rgb(249,219,189)",
   },
 ];
@@ -130,9 +130,9 @@ var aboutCircle = [
   {
     class: "bgCircleMedium",
     color: "#FF8799",
-    left: "none",
-    top: "1800px",
-    right: "-230px",
+    left: "-240px",
+    top: "900px",
+    right: "none",
     bottom: "0px",
     image: "none",
   },

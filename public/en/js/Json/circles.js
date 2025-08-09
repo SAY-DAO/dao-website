@@ -97,13 +97,13 @@ var smallHomeCircle = [
   {
     r: "300",
     left: "90px",
-    top: "4450px",
+    top: "3450px",
     color: "rgb(249,219,189)",
   },
   {
     r: "200",
     left: "1406px",
-    top: "4500px",
+    top: "3800px",
     color: "rgb(249,219,189)",
   },
 ];
