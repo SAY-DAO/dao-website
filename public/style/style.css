@@ -21,6 +21,16 @@ body {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: 'Exodar-outline';
+  src: url(../font/WebFonts/fonts/ttf/Exodar-Outline.ttf) format('truetype');
+}
+
+#dao-logo {
+  font-family: Exodar-outline !important;
+  margin-bottom: 0 !important;
+}
+
 p,
 h1,
 h2,
