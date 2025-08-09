@@ -27,7 +27,7 @@
     <!--         Meta Tags -->
 </head>
 
-<body id="Home">
+<body id="Home" onclick="resetZoom(event)">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BGKS7RV" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -116,11 +116,11 @@
 
 
     <section class="container" id="trophies">
-        <span class="sectionBigTitle"> Trophy </span>
+        <span class="sectionBigTitle"> Journey </span>
         <div class="row justify-content-md-center SectionHead">
             <div class="col-12">
                 <h6 class="sectionUpTitle text-center">
-                    جوایز SAY
+                    مسیر SAY
                 </h6>
                 <h3 class="sectionTilte">
                     می‌رویم و می‌رسیم
@@ -154,10 +154,26 @@
 
                 </span>
             </div>
-
+            <div class="col col-md-6 col-sm-12 award text-center" style="margin-top:50px">
+                <img class="awardLogo" src="/public/img/about/ParvaneNashr.jpg" alt="Nashr"
+                    style="width: 200px; cursor: pointer; transition: transform 0.3s ease;">
+                <br />
+                <span class=" awardDesc">
+                    مجوز نشر بر خط  برای قراردادن محتوای دیجیتال دیداری، شنیداری، نوشتاری و یا ترکیبی از آن­ها در معرض دسترس عمـوم.
+                    
+                </span>
+            </div>
+            <div class="col col-md-6 col-sm-12 award text-center" style="margin-top:50px">
+                <img class="awardLogo" src="/public/img/about/creative.png" lt="creative"
+                    style="width: 200px; cursor: pointer; transition: transform 0.3s ease;">
+                <br />
+                <span class="awardDesc">
+                    شرکت پندارآ در سال 1401 در کارگروه برنامه زیست بوم واحد‌های خلاق معاونت علمی، فناوری و اقتصاد دانش
+                    بنیان ریاست جمهوری به عنوان شرکت خلاق تایید شد.
+                </span>
+            </div>
         </div>
 
-        <div class="row"></div>
     </section>
 
 
@@ -274,6 +290,25 @@
     <script src="js/JavaScript/script.js"></script>
     <script src="js/JavaScript/about.js"></script>
 
+    <script>
+        // Get all images with the class 'awardLogo'
+        const images = document.querySelectorAll('.awardLogo');
+        // Add the zoom effect when any of the images is clicked
+        images.forEach(function (img) {
+            img.onclick = function (event) {
+                event.stopPropagation(); // Prevent body click event from firing
+                this.style.transform = 'scale(3)';
+            };
+        });
+        // Reset zoom when clicking anywhere else on the page
+        function resetZoom(event) {
+            if (!event.target.classList.contains('awardLogo')) {
+                images.forEach(function (img) {
+                    img.style.transform = 'scale(1)';
+                });
+            }
+        }
+    </script>
 
 
 

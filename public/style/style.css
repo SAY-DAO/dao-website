@@ -2835,6 +2835,16 @@ h6 {
   }
 }
 
+@media (max-width: 600px) {
+      #trophies .sectionBigTitle {
+  padding-top: 100px;
+  right: -480px;
+  top: -150px;
+  color: #f05a31;
+}
+}
+
+
 /*------------------------------------- Contact US---------------------------------------*/
 
 #callush3 {
