@@ -55,6 +55,7 @@ h6 {
 #addSvgCircle > .svg {
   position: absolute !important ;
   width: 100%;
+  height: 4100px;
   z-index: -1;
 }
 
