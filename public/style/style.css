@@ -22,8 +22,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Exodar-outline';
-  src: url(../font/WebFonts/fonts/ttf/Exodar-Outline.ttf) format('truetype');
+  font-family: "Exodar-outline";
+  src: url(../font/WebFonts/fonts/ttf/Exodar-Outline.ttf) format("truetype");
 }
 
 #dao-logo {
@@ -65,7 +65,7 @@ h6 {
 #addSvgCircle > .svg {
   position: absolute !important ;
   width: 100%;
-  height: 4100px;
+  height: 3500px;
   z-index: -1;
 }
 
@@ -204,6 +204,28 @@ h6 {
 }
 
 /*---------------------------------- Nav Bar -----------------------------------*/
+.external-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ext-icon {
+  transform: translateX(0);
+  transition: transform 140ms ease;
+}
+
+/* hover move */
+.external-link:hover .ext-icon,
+.external-link:focus .ext-icon {
+  transform: translateX(1px);
+}
+
+/* RTL reverse */
+:dir(rtl) .external-link:hover .ext-icon,
+:dir(rtl) .external-link:focus .ext-icon {
+  transform: translateX(-1px);
+}
+
 #lang {
   width: 36px;
   height: 36px;
@@ -2474,7 +2496,6 @@ h6 {
   background-image: url("../img/instagram.png");
 }
 
-
 #responsiveTeam
   .teamMemberWrapper
   .teamMemberList
@@ -2836,14 +2857,13 @@ h6 {
 }
 
 @media (max-width: 600px) {
-      #trophies .sectionBigTitle {
-  padding-top: 100px;
-  right: -480px;
-  top: -150px;
-  color: #f05a31;
+  #trophies .sectionBigTitle {
+    padding-top: 100px;
+    right: -480px;
+    top: -150px;
+    color: #f05a31;
+  }
 }
-}
-
 
 /*------------------------------------- Contact US---------------------------------------*/
 
