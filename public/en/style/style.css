@@ -164,7 +164,11 @@ body {
 }
 
 /*---------------------------------- Nav Bar -----------------------------------*/
-
+:root {
+  --nav-gap: 5px;
+  --nav-btn-minw-desktop: 110px;
+  --nav-btn-minw-mobile: 130px;
+}
 /* ----------------------- Fonts / header id fix ----------------------- */
 @font-face {
   font-family: "Exodar-outline";
