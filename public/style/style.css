@@ -358,6 +358,7 @@ h6 {
     /* keep flex for header alignment but rely on .navbar-collapse for stacking below */
   }
 
+  
   /* When collapsed, center the brand */
   .navbar-brand {
     /* margin: 0 auto; */
@@ -375,7 +376,8 @@ h6 {
   }
 
   .navbar-nav {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: column-reverse;
     gap: 12px;
     padding-top: 14px;
     margin-left: 0;
