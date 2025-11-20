@@ -164,6 +164,12 @@ body {
 }
 
 /*---------------------------------- Nav Bar -----------------------------------*/
+/* ---------- RTL / LTR safe navbar overrides (add to end of CSS) ---------- */
+
+/* Make sure the collapse block isn't forced into RTL by older rules */
+.navbar-expand-lg .navbar-collapse {
+  direction: initial !important;
+}
 :root {
   --nav-gap: 5px;
   --nav-btn-minw-desktop: 110px;

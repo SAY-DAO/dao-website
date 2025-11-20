@@ -195,7 +195,13 @@ h6 {
 }
 
 /*---------------------------------- Nav Bar -----------------------------------*/
-:root{
+/* ---------- RTL / LTR safe navbar overrides (add to end of CSS) ---------- */
+
+/* Make sure the collapse block isn't forced into RTL by older rules */
+.navbar-expand-lg .navbar-collapse {
+  direction: initial !important;
+}
+:root {
   --nav-gap: 5px;
   --nav-btn-minw-desktop: 110px;
   --nav-btn-minw-mobile: 130px;
@@ -363,7 +369,6 @@ h6 {
     /* keep flex for header alignment but rely on .navbar-collapse for stacking below */
   }
 
-  
   /* When collapsed, center the brand */
   .navbar-brand {
     /* margin: 0 auto; */
