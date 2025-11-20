@@ -38,13 +38,13 @@
 
     <!-- Header -->
     <div id="addSvgCircle"></div>
-    <section class="container" id="Header">
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="index.html">
-                <p id="dao-logo" style="color: #a1a1a1; font-size:2.5em; font-weight: 200">SAY DAO</p>
-
+    <section class="container" id="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a id="logoresponsive" class="navbar-brand" href="index.html">
+                <p id="dao-logo" style="color: '#a1a1a1'; fontsize: ' 2em'; fontweight: 200">
+                    SAY DAO
+                </p>
             </a>
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,36 +56,61 @@
                         <a href="../index.html">FA</a>
                     </li>
 
-                    <li class="nav-item" style="margin-right:20px">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link external-link" target="_blank" href="https://eco.saydao.org">
+                            Ecosystem
+                            <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"
+                                focusable="false">
+                                <path
+                                    d="M14 3h7v7h-2V6.41L9.71 15.7l-1.41-1.41L17.59 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link external-link" href="https://docs.saydao.org/en/docs/introduction"
+                            target="_blank">Documentations
+                            <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"
+                                focusable="false">
+                                <path
+                                    d="M14 3h7v7h-2V6.41L9.71 15.7l-1.41-1.41L17.59 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-btn-group">
                         <div class="btn-group">
                             <button class="dropdown-toggle btn nav-btn" type="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">DApp
+                                aria-haspopup="true" aria-expanded="false">Application
                             </button>
                             <div class="dropdown-menu">
-                                <!-- <a class="dropdown-item" target="_blank" href="https://sayapp.company">SAY APP</a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" target="_blank" href="https://dapp.saydao.org"
                                     style="text-align:center">DApp <sub>( V2.0.0)</sub></a>
                             </div>
                         </div>
                     </li>
-                    <li style="margin-right:20px">
-                        <a class="nav-link" href="https://docs.saydao.org" target="_blank">Docs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us </a>
-                    </li>
-                    <!-- <li class="nav-item ">
-                        <a class="nav-link" href="about.html"> About Us </a>
-                    </li> -->
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-
                 </ul>
             </div>
+            <a id="logo" class="navbar-brand" href="index.html">
+                <p id="dao-logo" style="color: #a1a1a1; font-size: 2.5em; font-weight: 200">
+                    SAY DAO
+                </p>
+            </a>
         </nav>
     </section>
+
 
     <!-- Slider -->
 
@@ -486,106 +511,9 @@
         </div>
     </div>
 
-    <!-- Report -->
-    <!-- <section class="container" id="report">
-        <div class="row justify-content-md-center SectionHead">
-            <div id="graphs" class="col-12">
-                <h6 class="sectionUpTitle text-center">
-                    Transparency
-                </h6>
-                <h3 class="sectionTilte">
-                    Weekly Reports
-                </h3>
-            </div>
-        </div>
-        <div id="graph_container" class="container col-10">
-            <ul class="nav nav-tabs" id="myTabs" role="tablist">
-                <li class="nav-item active">
-                    <a class="nav-link active" href="#cumulative-needs" data-toggle="tab">Needs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#payment" data-toggle="tab">Payments</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#need" data-toggle="tab"> Weekly</a>
-                </li>
-            </ul>
-            <div class="container tab-content">
-                <div class="container tab-pane active" id="cumulative-needs">
-                    <br>
-                    <p>Cumulative needs discovered by the social workers and paid by the virtual families.</p>
-                    <iframe class="container"
-                        src="https://metabase.say.company/public/question/7c06bf2f-62ad-433d-be0a-a1783845101c"
-                        frameborder="0" width="100%" height="400" allowtransparency>
-                    </iframe>
-                </div>
-                <div class="container tab-pane" id="payment">
-                    <br />
-                    <p>Cumulative payments made for children supported by SAY.</p>
-                    <iframe class="container"
-                        src="https://metabase.say.company/public/question/e38f078e-d04b-4ef8-8a67-1ce23fa907f6"
-                        frameborder="0" width="100%" height="400" allowtransparency>
-                    </iframe>
-                </div>
-
-                <div class="container tab-pane fade" id="need">
-                    <br>
-                    <p>Number of children's needs which have been taken care of by users.</p>
-                    <iframe class="container"
-                        src="https://metabase.say.company/public/question/913bba6e-f854-4c6d-9e13-abc9b4ca056b"
-                        frameborder="0" width="100%" height="400" allowtransparency>
-                    </iframe>
-                </div>
-            </div>
-        </div> -->
-        <!--    Report Responsive-->
-        <!-- <div id="graph_container2" class="container col-12">
-            <ul class="nav nav-tabs" id="myTabs2" role="tablist">
-                <li class="nav-item active">
-                    <a class="nav-link active" href="#cumulative-needs2" data-toggle="tab">Needs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#payment2" data-toggle="tab">Payments</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#need2" data-toggle="tab">Weekly</a>
-                </li>
-            </ul>
-            <div class="container tab-content">
-                <div class="container tab-pane active" id="cumulative-needs2">
-                    <br>
-                    <p>Cumulative needs discovered by the social workers and paid by the virtual families.</p>
-                    <iframe class="container"
-                        src="https://metabase.say.company/public/question/7c06bf2f-62ad-433d-be0a-a1783845101c"
-                        frameborder="0" width="100%" height="400" allowtransparency>
-                    </iframe>
-                </div>
-                <div class="container tab-pane" id="payment2">
-                    <br>
-                    <p>Cumulative payments made for children supported by SAY.</p>
-                    <iframe class="container"
-                        src="https://metabase.say.company/public/question/e38f078e-d04b-4ef8-8a67-1ce23fa907f6"
-                        frameborder="0" width="100%" height="400" allowtransparency>
-                    </iframe>
-                </div>
-
-                <div class="container tab-pane fade" id="need2">
-                    <br>
-                    <p>Number of children's needs which have been taken care of by users.</p>
-                    <iframe class="container"
-                        src="https://metabase.say.company/public/question/913bba6e-f854-4c6d-9e13-abc9b4ca056b"
-                        frameborder="0" width="100%" height="400" allowtransparency>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-
-    </section> -->
-
     <!-- Footer -->
     <section class="container" id="footer">
         <div class="row footer-data">
-
             <!-- Footer Desc -->
             <div class="col col-md-4" id="desc">
                 <div class="row">
@@ -602,41 +530,46 @@
                     </div>
                 </div>
             </div>
-
-
             <!-- Links -->
             <div class="col col-md-4" id="links">
                 <div class="row">
-                    <div class="col-md-6 link-wrapper">
+                    <div class="col-md-4 link-wrapper">
                         <ul>
-                            <!-- <li class="title">Company</li> -->
+                            <li>
+                                <a target="_blank" href="https://docs.saydao.org">Documentations</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://eco.saydao.org">Ecosystem</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-4 link-wrapper">
+                        <ul>
                             <li>
                                 <a href="index.html">Home</a>
                             </li>
-                            <!-- <li class="active">
-                                <a href="about.html">About us</a>
-                            </li> -->
+
                             <li>
-                                <a href="contact.html">Contact us</a>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact Us</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6 link-wrapper">
+                    <div class="col-md-4 link-wrapper">
                         <ul>
-                            <li class="title">Social</li>
+                            <li class="title">Social Media</li>
                             <li>
                                 <a href="https://github.com/SAY-DAO">
-                                    <img style="width: 40%" src="img/footer/github.png" alt="">
+                                    <img style="width: 40%" src="img/footer/github.png" alt="" />
                                 </a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
-
-
-
         </div>
         <div class="row footer-copy">
             <div class="col-md-6 col-sm-12 copy-right">
@@ -695,11 +628,6 @@
         });
     </script>
 
-    <img src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?vd890ed88b3a28c805acc70e1a88fa27c" width="1"
-        height="1" style="max-width: 1px; max-height: 1px; visibility: hidden; padding: 0; margin: 0; display: block;"
-        border="0">
-    <script src="https://static.mailerlite.com/js/w/webforms.min.js?vd890ed88b3a28c805acc70e1a88fa27c"
-        type="text/javascript"></script>
 </body>
 
 </html>

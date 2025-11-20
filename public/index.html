@@ -49,7 +49,7 @@
       <span> با توجه به اتفاقات اخیر ایران عزیز، در حال انتقال تمام سرویس‌ها به داخل کشور هستیم و به این دلیل دسترسی‌ها تا چند روز محدود خواهد بود. از همراهی شما پیشاپیش متشکریم. </span>
     </div> -->
   <section class="container" id="Header">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a id="logoresponsive" class="navbar-brand" href="index.html">
         <p id="dao-logo" style="color: '#a1a1a1'; fontsize: ' 2em'; fontweight: 200">
           SAY DAO
@@ -64,19 +64,25 @@
           <li id="langresponsive">
             <a href="en/index.html">EN</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">خانه<span class="sr-only">(current)</span>
-            </a>
+          <li id="lang">
+            <a href="en/index.html">EN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="whatis.html">اول سلام</a>
+            <div class="btn-group">
+              <button class="dropdown-toggle btn nav-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                اپلیکیشن
+              </button>
+              <div class="dropdown-menu">
+                <!-- <a class="dropdown-item" target="_blank" href="https://sayapp.company">SAY APP</a> -->
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" target="_blank" href="https://dapp.saydao.org"
+                  style="text-align: center">دپلیکیشن <sub>(نسخه دوم)</sub></a>
+              </div>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">درباره ما</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">ارتباط با ما</a>
-          </li>
+
+
           <li class="nav-item ">
             <a class="nav-link external-link" target="_blank" href="https://eco.saydao.org">
               اکوسیستم
@@ -95,29 +101,26 @@
             </a>
           </li>
           <li class="nav-item">
-            <div class="btn-group">
-              <button class="dropdown-toggle btn nav-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                اپلیکیشن
-              </button>
-              <div class="dropdown-menu">
-                <!-- <a class="dropdown-item" target="_blank" href="https://sayapp.company">SAY APP</a> -->
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" target="_blank" href="https://dapp.saydao.org"
-                  style="text-align: center">دپلیکیشن <sub>(نسخه دوم)</sub></a>
-              </div>
-            </div>
+            <a class="nav-link" href="about.html">درباره ما</a>
           </li>
-          <li id="lang">
-            <a href="en/index.html">EN</a>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">ارتباط با ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="whatis.html">اول سلام</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">خانه<span class="sr-only">(current)</span>
+            </a>
           </li>
         </ul>
+        <a id="logo" class="navbar-brand" href="index.html">
+          <p id="dao-logo" style="color: #a1a1a1; font-size: 2.5em; font-weight: 200">
+            SAY DAO
+          </p>
+        </a>
       </div>
-      <a id="logo" class="navbar-brand" href="index.html">
-        <p id="dao-logo" style="color: #a1a1a1; font-size: 2.5em; font-weight: 200">
-          SAY DAO
-        </p>
-      </a>
+
     </nav>
   </section>
 
@@ -530,8 +533,8 @@
       </div>
     </div> -->
 
-    <!--    Report Responsive-->
-    <!-- <div id="graph_container2" class="container col-12">
+  <!--    Report Responsive-->
+  <!-- <div id="graph_container2" class="container col-12">
       <ul class="nav nav-tabs" id="myTabs2" role="tablist">
         <li class="nav-item active">
           <a class="nav-link active" href="#cumulative-needs2" data-toggle="tab">پرداخت‌ها</a>
@@ -710,18 +713,6 @@
       }
     });
   </script>
-  <img src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?vd890ed88b3a28c805acc70e1a88fa27c" width="1"
-    height="1" style="
-        max-width: 1px;
-        max-height: 1px;
-        visibility: hidden;
-        padding: 0;
-        margin: 0;
-        display: block;
-      " border="0" />
-  <script src="https://static.mailerlite.com/js/w/webforms.min.js?vd890ed88b3a28c805acc70e1a88fa27c"
-    type="text/javascript"></script>
-
 </body>
 
 </html>

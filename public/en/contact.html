@@ -38,12 +38,13 @@
 
   <!-- Header -->
 
-  <section class="container" id="Header">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="index.html">
-        <p id="dao-logo" style="color: #a1a1a1; font-size:2.5em; font-weight: 200">SAY DAO</p>
+  <section class="container" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a id="logoresponsive" class="navbar-brand" href="index.html">
+        <p id="dao-logo" style="color: '#a1a1a1'; fontsize: ' 2em'; fontweight: 200">
+          SAY DAO
+        </p>
       </a>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,33 +55,55 @@
           <li id="lang">
             <a href="../index.html">FA</a>
           </li>
-          <li class="nav-item" style="margin-right:20px">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link external-link" target="_blank" href="https://eco.saydao.org">
+              Ecosystem
+              <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M14 3h7v7h-2V6.41L9.71 15.7l-1.41-1.41L17.59 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link external-link" href="https://docs.saydao.org/en/docs/introduction"
+              target="_blank">Documentations
+              <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M14 3h7v7h-2V6.41L9.71 15.7l-1.41-1.41L17.59 5H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item nav-btn-group">
             <div class="btn-group">
               <button class="dropdown-toggle btn nav-btn" type="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">DApp
+                aria-expanded="false">Application
               </button>
               <div class="dropdown-menu">
-                <!-- <a class="dropdown-item" target="_blank" href="https://sayapp.company">SAY APP</a> -->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" target="_blank" href="https://dapp.saydao.org" style="text-align:center">DApp
                   <sub>( V2.0.0)</sub></a>
               </div>
             </div>
           </li>
-          <li style="margin-right:20px">
-            <a class="nav-link" href="https://docs.saydao.org" target="_blank">Docs</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="contact.html">Contact Us </a>
-          </li>
-          <!-- <li class="nav-item">
-              <a class="nav-link" href="about.html"> About Us </a>
-            </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
         </ul>
       </div>
+      <a id="logo" class="navbar-brand" href="index.html">
+        <p id="dao-logo" style="color: #a1a1a1; font-size: 2.5em; font-weight: 200">
+          SAY DAO
+        </p>
+      </a>
     </nav>
   </section>
 
@@ -139,29 +162,39 @@
       <!-- Links -->
       <div class="col col-md-4" id="links">
         <div class="row">
-          <div class="col-md-6 link-wrapper">
+          <div class="col-md-4 link-wrapper">
             <ul>
-              <!-- <li class="title">Company</li> -->
+              <li>
+                <a target="_blank" href="https://docs.saydao.org">Documentations</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://eco.saydao.org">Ecosystem</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-md-4 link-wrapper">
+            <ul>
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <!-- <li class="active">
-                  <a href="about.html">About us</a>
-                </li> -->
+
               <li>
-                <a href="contact.html">Contact us</a>
+                <a href="about.html">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-6 link-wrapper">
+          <div class="col-md-4 link-wrapper">
             <ul>
-              <li class="title">Social</li>
+              <li class="title">Social Media</li>
               <li>
                 <a href="https://github.com/SAY-DAO">
                   <img style="width: 40%" src="img/footer/github.png" alt="" />
                 </a>
               </li>
-
             </ul>
           </div>
         </div>
@@ -217,17 +250,6 @@
   <script src="js/JavaScript/script.js"></script>
   <script src="js/JavaScript/contact.js"></script>
 
-  <img src="https://track.mailerlite.com/webforms/o/1401204/i4t2w7?vd890ed88b3a28c805acc70e1a88fa27c" width="1"
-    height="1" style="
-        max-width: 1px;
-        max-height: 1px;
-        visibility: hidden;
-        padding: 0;
-        margin: 0;
-        display: block;
-      " border="0" />
-  <script src="https://static.mailerlite.com/js/w/webforms.min.js?vd890ed88b3a28c805acc70e1a88fa27c"
-    type="text/javascript"></script>
 </body>
 
 </html>

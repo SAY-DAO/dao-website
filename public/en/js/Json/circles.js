@@ -130,9 +130,9 @@ var aboutCircle = [
   {
     class: "bgCircleMedium",
     color: "#FF8799",
-    left: "none",
-    top: "1800px",
-    right: "-230px",
+    left: "-240px",
+    top: "900px",
+    right: "none",
     bottom: "0px",
     image: "none",
   },

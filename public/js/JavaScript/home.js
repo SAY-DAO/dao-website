@@ -33,6 +33,7 @@ for (var i = 0; i < smallHomeCircle.length; i++) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Start by loading first Testimonial.
+  console.log("here");
   loadTesti("left1");
   document.querySelectorAll(".testi-link").forEach((link) => {
     link.onclick = () => {

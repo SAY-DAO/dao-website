@@ -18,9 +18,6 @@ body {
   margin-top: 30px;
 }
 
-#header .sticky-top {
-  background-color: transparent;
-}
 
 @media only screen and (max-width: 540px) {
   body {
@@ -35,13 +32,34 @@ body {
 }
 
 @font-face {
-  font-family: 'Exodar-outline';
-  src: url(../../font/WebFonts/fonts/ttf/Exodar-Outline.ttf) format('truetype');
+  font-family: "Exodar-outline";
+  src: url(../../font/WebFonts/fonts/ttf/Exodar-Outline.ttf) format("truetype");
+}
+
+#langresponsive {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ff8417;
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 45px;
+}
+
+#langresponsive > a {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 36px;
+  color: #f05a31;
+  box-sizing: border-box;
 }
 
 #dao-logo {
   font-family: Exodar-outline !important;
   margin-bottom: 0 !important;
+  padding-right: 80px;
 }
 /*---------------------------------- Circles -----------------------------------*/
 
@@ -148,108 +166,281 @@ body {
 }
 
 /*---------------------------------- Nav Bar -----------------------------------*/
+
+/* ----------------------- Fonts / header id fix ----------------------- */
+@font-face {
+  font-family: "Exodar-outline";
+  src: url(../../font/WebFonts/fonts/ttf/Exodar-Outline.ttf) format("truetype");
+}
+
+#dao-logo {
+  font-family: Exodar-outline !important;
+  margin-bottom: 0 !important;
+}
+
+/* make sure your header id selector matches the HTML id="header" */
+#header {
+  margin-top: 30px;
+}
+
+/* ----------------------- Navbar core layout (visual order) ----------------------- */
+/* Keep HTML order unchanged; use flex + order to arrange visually */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem; /* small padding; adjust if you prefer */
+}
+
+/* Brand (logo) — visually first */
+.navbar-brand {
+  order: 0;
+  flex: 0 0 auto; /* don't stretch */
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Collapse block — visually after brand */
+.navbar-collapse {
+  order: 1;
+  flex: 1 1 auto; /* allow nav to grow */
+}
+
+/* Toggler — appears after collapse; on desktop it's visually hidden by Bootstrap */
+.navbar-toggler {
+  order: 2;
+}
+
+/* Navbar list: use flex for consistent spacing */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap); /* consistent spacing between items */
+  padding-left: 0;
+  margin: 0;
+  margin-left: 0; /* we will use margin-left:auto on #lang to push it right */
+}
+
+/* remove earlier forced RTL direction (do NOT use direction:rtl here) */
+
+/* Nav items size to content */
+.navbar-nav > li {
+  width: auto;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure links keep expected styling */
+.navbar-light .navbar-nav {
+  font-family: "IRANSansMobile", sans-serif;
+  font-weight: 300;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+/* Active / show color state */
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .active .nav-link {
+  color: #f05a31;
+}
+
+/* ----------------------- Language pill (far-right) ----------------------- */
 #lang {
+  order: 99; /* keep it last in visual order */
+  margin-left: auto; /* pushes it to the far right inside the horizontal nav */
   width: 36px;
   height: 36px;
   text-align: center;
   border-radius: 50%;
   border: 1px solid #ff8417;
-  box-sizing: border-box;
   padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 #lang > a {
-  width: 36px;
-  height: 36px;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   line-height: 36px;
   color: #f05a31;
-  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
+
+/* ----------------------- DApp button / dropdown tweaks ----------------------- */
+.nav-btn-group {
+  padding-right: 6px; /* small separation from neighbors */
+}
+
+.navbar-light .navbar-nav .nav-btn {
+  background-image: linear-gradient(-90deg, #fbb563, #f05a31);
+  border-radius: 18px;
+  height: 36px;
+  min-width: var(--nav-btn-minw-desktop);
+  padding: 0 12px;
+  color: #fff;
+  border-color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------- remove fixed widths that caused uneven gaps ----------------------- */
+.navbar-light .navbar-nav .nav-item {
+  width: auto; /* allow natural width */
+  text-align: center;
+}
+
+/* preserve first/last visual alignment if you had special rules before */
+/* If you prefer different first/last widths, tweak specific items via classes, not global widths */
+
+/* external-link icon sizing */
+.ext-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* small utility */
+.navbar-light .navbar-brand img {
+  width: 100px;
+  height: auto;
+}
+
+/* ----------------------- Responsive / Mobile ----------------------- */
+@media (max-width: 767px) {
+  /* collapse is used in mobile; keep the brand centered and nav stacked */
+  .navbar {
+    /* keep flex for header alignment but rely on .navbar-collapse for stacking below */
+  }
+
+  /* When collapsed, center the brand */
+  .navbar-brand {
+    margin: 0 auto;
+    order: 0;
+  }
+
+  /* Ensure toggler appears where it won't overlap the brand */
+  .navbar-toggler {
+    order: 1;
+  }
+
+  /* Stack nav items vertically inside the collapse */
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 14px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .navbar-nav > li {
+    width: auto;
+    padding: 6px 0;
+  }
+
+  /* Reset language pill behavior in column */
+  #lang {
+    order: 99;
+    margin-left: 0;
+    width: 36px;
+    height: 36px;
+  }
+
+  /* make the DApp/button easier to tap on mobile */
+  .navbar-light .navbar-nav .nav-btn {
+    min-width: var(--nav-btn-minw-mobile);
+  }
+
+  /* optional: hide decorative svgs on very small screens if you find them noisy */
+  @media (max-width: 540px) {
+    .ext-icon {
+      display: none;
+    }
+  }
+}
+
+/* ----------------------- Misc / existing rules preserved ----------------------- */
 
 #subli {
   margin-left: 15px;
   margin-right: 15px;
 }
-.navbar-nav {
-  list-style: none;
-}
 
-.navbar-expand-lg .navbar-collapse {
-  direction: rtl;
-}
-.navbar-light .navbar-nav {
-  font-family: "IRANSansMobile";
-  font-weight: 300;
-}
-
-.navbar-light .navbar-nav .active .nav-link {
-  color: #f05a31;
-}
-.navbar-light .navbar-nav .nav-link.show {
-  color: #f05a31;
-}
-.navbar-light .navbar-nav .show .nav-link {
-  color: #f05a31;
-}
-.navbar-light .navbar-nav .nav-link {
-  font-size: 16px;
-}
-.navbar-light .navbar-nav .nav-btn {
-  background-image: linear-gradient(-90deg, #fbb563, #f05a31);
-  border-radius: 18px;
-  height: 36px;
-  width: 130px;
-  color: #fff;
-  border-color: #fff;
-  font-size: 16px;
-  font-weight: normal;
-}
-.navbar-light .navbar-nav .nav-item {
-  width: 120px;
-  text-align: center;
-}
-
-.navbar-light .navbar-nav .nav-item:first-child {
-  width: 150px;
-  text-align: right;
-}
-.navbar-light .navbar-nav .nav-item:last-child {
-  width: 150px;
-  text-align: right;
-}
-
-.navbar-light .nav-link.active {
-  color: #f05a31;
-}
-.navbar-light .navbar-brand img {
-  width: 100px;
-}
-
-@media only screen and (max-width: 540px) {
-  #langhide {
-  }
-}
-
+/* small mobile lang spacing tweaks (kept if you used them before) */
 @media only screen and (max-width: 540px) {
   #lang {
     margin-right: 10px;
   }
-}
-@media only screen and (max-width: 540px) {
   #subli {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
+/* accessibility small fix for anchor focus */
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+/* preserve body overflow-x rules that were used */
+
+/* preserve body overflow-x rules that were used */
 @media only screen and (max-width: 540px) {
-  .navbar-light .navbar-nav .nav-item:last-child {
-    text-align: center;
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  #logoresponsive {
+    display: none;
   }
 }
 @media only screen and (max-width: 540px) {
+  #logo {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
   .svg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #langresponsive {
+    margin-right: 10px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  #langresponsive {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #lang {
     display: none;
   }
 }
@@ -275,7 +466,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
   .navbar-light .navbar-brand img {
     position: absolute;
     top: -0px;
@@ -1724,6 +1915,7 @@ body {
   margin-bottom: 20px;
   font-size: 12px;
   font-weight: 300;
+  min-width: 100;
 }
 
 #footer #links .link-wrapper ul li.active a {
@@ -1733,7 +1925,7 @@ body {
 
 #footer #links .link-wrapper ul li.title {
   opacity: 0.8;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 #footer #links .link-wrapper ul li a {
@@ -1812,7 +2004,6 @@ body {
 #footer #links .social-media {
   padding: 10px;
 }
-
 
 @media only screen and (max-width: 540px) {
   #footer .footer-copy .copy-links {
@@ -2337,7 +2528,6 @@ body {
   .social.linkedin {
   background-image: url("../img/linkedin.png");
 }
-
 
 #responsiveTeam
   .teamMemberWrapper
