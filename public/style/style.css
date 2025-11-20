@@ -286,7 +286,6 @@ h6 {
 /* ----------------------- Language pill (far-right) ----------------------- */
 #lang {
   order: 0; /* keep it first in visual order */
-  margin-right: auto; /* pushes it to the far right inside the horizontal nav */
   width: 36px;
   height: 36px;
   text-align: center;
