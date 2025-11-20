@@ -18,7 +18,6 @@ body {
   margin-top: 30px;
 }
 
-
 @media only screen and (max-width: 540px) {
   body {
     overflow-x: hidden !important;
@@ -59,7 +58,6 @@ body {
 #dao-logo {
   font-family: Exodar-outline !important;
   margin-bottom: 0 !important;
-  padding-right: 80px;
 }
 /*---------------------------------- Circles -----------------------------------*/
 
@@ -331,7 +329,7 @@ body {
 
   /* When collapsed, center the brand */
   .navbar-brand {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     order: 0;
   }
 
@@ -416,6 +414,9 @@ body {
 @media only screen and (min-width: 540px) {
   #logoresponsive {
     display: none;
+  }
+  #dao-logo {
+    padding-right: 80px;
   }
 }
 @media only screen and (max-width: 540px) {

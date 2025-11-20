@@ -205,14 +205,12 @@ h6 {
 #dao-logo {
   font-family: Exodar-outline !important;
   margin-bottom: 0 !important;
-  padding-left: 80px;
 }
 
 /* make sure your header id selector matches the HTML id="header" */
 #header {
   margin-top: 30px;
 }
-
 
 /* ----------------------- Navbar core layout (visual order) ----------------------- */
 /* Keep HTML order unchanged; use flex + order to arrange visually */
@@ -362,7 +360,7 @@ h6 {
 
   /* When collapsed, center the brand */
   .navbar-brand {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     order: 0;
   }
 
@@ -465,6 +463,9 @@ h6 {
 @media only screen and (min-width: 540px) {
   #logoresponsive {
     display: none;
+  }
+  #dao-logo {
+    padding-left: 80px;
   }
 }
 @media only screen and (max-width: 540px) {
