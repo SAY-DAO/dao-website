@@ -71,6 +71,13 @@ h6 {
   width: 100%;
   height: 1360px;
 }
+
+#addSvgCircleFaq > .svg {
+  position: absolute !important ;
+  width: 100%;
+  height: 1360px;
+}
+
 #addSvgWhatCircle > .svg {
   position: absolute !important ;
   width: 100%;

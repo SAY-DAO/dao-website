@@ -209,6 +209,18 @@ var smallAboutCircle = [
   },
 ];
 
+var faqCircle = [
+  {
+    class: "bgCirclebig",
+    color: "#FBB563",
+    left: "940px",
+    top: "-250px",
+    right: "0px",
+    bottom: "0px",
+    image: "none",
+  },
+];
+
 var contactCircle = [
   {
     class: "bgCirclebig",
@@ -232,6 +244,46 @@ var smallContactCircle = [
     r: "11.5",
     left: "546.5px",
     top: "651.5px",
+    color: "#5BD7D2",
+  },
+  {
+    r: "23",
+    left: "1266px",
+    top: "1000px",
+    color: "#F05A31",
+  },
+  {
+    r: "14.5",
+    left: "264px",
+    top: "1700px",
+    color: "#FBB563",
+  },
+
+  {
+    r: "200",
+    left: "10px",
+    top: "2000px",
+    color: "rgb(249,219,189)",
+  },
+  {
+    r: "300",
+    left: "1380px",
+    top: "1830px",
+    color: "rgb(249,219,189)",
+  },
+];
+
+var smallFaqCircle = [
+  {
+    r: "14.5",
+    left: "749.5px",
+    top: "579.5px",
+    color: "#FBB563",
+  },
+  {
+    r: "48.5",
+    left: "26.5px",
+    top: "851.5px",
     color: "#5BD7D2",
   },
   {
