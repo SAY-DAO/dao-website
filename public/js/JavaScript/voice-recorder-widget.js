@@ -24,97 +24,181 @@
   const root = shadow || host;
 
   // Template (styles + markup + JS all inside shadow if supported)
+  // Template (styles + markup + JS all inside shadow if supported)
   const tpl = document.createElement("template");
   tpl.innerHTML = `
-    <style>
-      :host { all: initial; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  <style>
+    :host { all: initial; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+
+    /* Theme variables */
+    :host {
+      --vr-accent-1: #beeeff; /* cool blue */
+      --vr-accent-2: #faccc0; /* soft peach */
+      --vr-accent-3: #fab28e; /* warm coral */
+      --vr-bg:rgba(0, 0, 0, 0.95);
+      --vr-ink:rgb(88, 126, 145);
+      --vr-muted: #6b7a83;
+      --vr-radius: 12px;
+      --vr-fab-size: 56px;
+    }
+
+    /* FAB */
+    .fab {
+      position: fixed;
+      ${position}: calc(20px + env(safe-area-inset-right, 0px));
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      z-index: 2147483647;
+      width: var(--vr-fab-size);
+      height: var(--vr-fab-size);
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--vr-accent-1), var(--vr-accent-3));
+      color: var(--vr-ink);
+      border: 1px solid rgba(7,36,51,0.06);
+      box-shadow: 0 8px 30px rgba(11,18,32,0.12), 0 2px 6px rgba(190,238,255,0.08);
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      cursor: pointer;
+      transform: translateZ(0);
+      transition: transform .12s ease, box-shadow .12s ease;
+      outline: none;
+    }
+    .fab:focus { box-shadow: 0 10px 34px rgba(11,18,32,0.16), 0 4px 8px rgba(190,238,255,0.12); }
+    .fab:hover { transform: translateY(-3px); }
+
+    /* Panel */
+    .panel {
+      position: fixed;
+      ${position}: calc(20px + env(safe-area-inset-right, 0px));
+      bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+      z-index: 2147483646;
+      width: 360px;
+      max-width: calc(100% - 40px);
+      background: var(--vr-bg);
+      color: var(--vr-ink);
+      border-radius: var(--vr-radius);
+      padding: 12px;
+      box-shadow: 0 12px 40px rgba(11,18,32,0.06);
+      border: 1px solid rgba(250,204,192,0.08);
+      display: none;
+    }
+    .panel.open { display: block; }
+    /* expose panel to external styling where supported */
+    .panel[part] { /* noop — part attr added on element itself */ }
+
+    .panel h4 { margin: 0 0 6px; font-size: 15px; color: var(--vr-accent-1); font-weight:700; }
+    .panel p { margin: 0 0 12px; color: var(--vr-muted); font-size: 13px; }
+
+    .controls { display:flex; gap:8px; }
+    .btn {
+      flex:1;
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid rgba(7,36,51,0.06);
+      background:transparent;
+      color: var(--vr-accent-1);
+      cursor:pointer;
+      transition: transform .08s ease, filter .08s ease;
+      font-weight:600;
+    }
+    .btn:disabled { opacity:0.5; cursor:not-allowed; transform:none; filter:grayscale(.1); }
+    .btn.primary {
+      background: linear-gradient(90deg, rgba(190,238,255,0.22), rgba(250,178,142,0.09));
+      border-color: rgba(250,178,142,0.12);
+      color: var(--vr-ink);
+    }
+
+    audio { width:100%; margin-top:10px; background:linear-gradient(180deg,#fff,#fbfdff); border-radius:6px; border:1px solid rgba(190,238,255,0.08); padding:6px; }
+
+    .status { font-size:13px; color: var(--vr-accent-3); margin-top:8px; }
+    .hint { font-size:12px; color: var(--vr-muted); margin-top:8px; }
+
+    .follow {
+      margin-top:10px;
+      padding:10px;
+      border-radius:8px;
+      background: linear-gradient(180deg, rgba(250,204,192,0.03), rgba(190,238,255,0.01));
+      border:1px solid rgba(250,204,192,0.04);
+    }
+    .follow label { display:block; margin-bottom:6px; font-size:13px; color:var(--vr-ink); }
+    .radio-row { display:flex; gap:8px; margin-bottom:8px; color:var(--vr-accent-1); align-items:center; }
+
+    .input { width:100%; padding:8px; border-radius:6px; border:1px solid rgba(7,36,51,0.06); background:transparent; color:inherit; }
+
+    .success {
+      margin-top:10px;
+      padding:10px;
+      border-radius:8px;
+      background: linear-gradient(90deg, rgba(190,238,255,0.06), rgba(250,204,192,0.03));
+      color: var(--vr-ink);
+      display:none;
+    }
+    .error { color:#b74124; font-size:13px; margin-top:6px; display:none; }
+
+    /* Accessibility / hit area */
+    .fab { padding:6px; box-sizing: content-box; }
+
+    /* Responsive: center FAB on small screens and adapt panel */
+    @media (max-width:420px) {
       .fab {
-        position: fixed;
-        ${position}: 20px;
-        bottom: 20px;
-        z-index: 2147483647;
-        width: 56px; height: 56px;
-        border-radius: 50%;
-        background: #0b1220;
-        color: #cfeaff;
-        border: 1px solid rgba(0,0,0,0.15);
-        box-shadow: 0 8px 30px rgba(2,6,23,0.35);
-        display: flex; align-items:center; justify-content:center;
-        cursor: pointer;
+        width: 52px;
+        height: 52px;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px));
       }
       .panel {
-        position: fixed;
-        ${position}: 20px;
-        bottom: 92px;
-        z-index: 2147483646;
-        width: 360px;
-        max-width: calc(100% - 40px);
-        background: #071022;
-        color: #e6eef8;
-        border-radius: 12px;
-        padding: 12px;
-        box-shadow: 0 12px 40px rgba(2,6,23,0.35);
-        display: none;
+        left: 12px !important;
+        right: 12px !important;
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+        width: auto;
       }
-      .panel.open { display: block; }
-      .panel h4 { margin: 0 0 6px; font-size: 15px; }
-      .panel p { margin: 0 0 12px; color: #9aaec6; font-size: 13px; }
-      .controls { display:flex; gap:8px; }
-      .btn { flex:1; padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:#60a5fa; cursor:pointer; }
-      .btn:disabled { opacity:0.5; cursor:not-allowed; }
-      .btn.primary { background: linear-gradient(90deg, rgba(96,165,250,0.12), rgba(34,211,238,0.04)); border-color: rgba(96,165,250,0.12); }
-      audio { width:100%; margin-top:10px; background:#fff; border-radius:6px; }
-      .status { font-size:13px; color:#9aaec6; margin-top:8px; }
-      .hint { font-size:12px; color:#9aaec6; margin-top:8px; }
-      .follow { margin-top:10px; padding:10px; border-radius:8px; background:#08202b; border:1px solid rgba(255,255,255,0.02); }
-      .follow label { display:block; margin-bottom:6px; font-size:13px; color:#e6eef8; }
-      .radio-row { display:flex; gap:8px; margin-bottom:8px; color:#cfeaff; }
-      .input { width:100%; padding:8px; border-radius:6px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit; }
-      .success { margin-top:10px; padding:10px; border-radius:8px; background: linear-gradient(90deg, rgba(34,197,94,0.08), rgba(34,197,94,0.03)); color:#c9f7d2; display:none; }
-      .error { color:#ffb4b4; font-size:13px; margin-top:6px; display:none; }
-      @media (max-width:420px) { .panel { right: 12px; left: 12px; bottom: 90px; width:auto; } }
-    </style>
+    }
+    @media (max-width:340px) {
+      .fab { width:48px; height:48px; }
+      .panel { padding:8px; bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+    }
+  </style>
 
-    <button class="fab" part="fab" aria-label="Open voice recorder" title="Voice message">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M19 11a7 7 0 0 1-14 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+  <button class="fab" part="fab" aria-label="Open voice recorder" title="Voice message">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19 11a7 7 0 0 1-14 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
-    <div class="panel" role="dialog" aria-hidden="true" aria-label="Voice recorder">
-      <h4>Voice message</h4>
-      <p>Record a short voice clip and upload it. After recording you'll be asked if you'd like follow-up contact (email or phone).</p>
+  <!-- add part="panel" so external CSS can style it via ::part(panel) if desired -->
+  <div class="panel" part="panel" role="dialog" aria-hidden="true" aria-label="Voice recorder">
+    <h4>Voice message</h4>
+    <p>Record a short voice clip and upload it. After recording you'll be asked if you'd like follow-up contact (email or phone).</p>
 
-      <div class="controls">
-        <button class="btn primary" data-action="rec">Start</button>
-        <button class="btn" data-action="stop" disabled>Stop</button>
-        <button class="btn" data-action="play" disabled>Play</button>
-      </div>
-
-      <audio controls hidden></audio>
-      <div class="status">Status: idle</div>
-      <div class="hint">Tip: If permission doesn't appear, disable Brave Shields or check site microphone settings.</div>
-
-      <div class="follow" hidden>
-        <label>Do you want to be reached back?</label>
-        <div class="radio-row">
-          <label><input type="radio" name="vr-contact" value="none" checked> No response</label>
-          <label><input type="radio" name="vr-contact" value="email"> Email</label>
-          <label><input type="radio" name="vr-contact" value="phone"> Phone</label>
-        </div>
-        <div class="contact-inputs"></div>
-        <div class="error" aria-live="polite"></div>
-      </div>
-
-      <div style="display:flex;gap:8px;margin-top:10px">
-        <button class="btn" data-action="download" disabled>Download</button>
-        <button class="btn" data-action="upload" disabled>Upload</button>
-      </div>
-
-      <div class="success" role="status" aria-live="polite"></div>
+    <div class="controls">
+      <button class="btn primary" data-action="rec">Start</button>
+      <button class="btn" data-action="stop" disabled>Stop</button>
+      <button class="btn" data-action="play" disabled>Play</button>
     </div>
-  `;
+
+    <audio controls hidden></audio>
+    <div class="status">Status: idle</div>
+    <div class="hint">Tip: If permission doesn't appear, disable Brave Shields or check site microphone settings.</div>
+
+    <div class="follow" hidden>
+      <label>Do you want to be reached back?</label>
+      <div class="radio-row">
+        <label><input type="radio" name="vr-contact" value="none" checked> No response</label>
+        <label><input type="radio" name="vr-contact" value="email"> Email</label>
+        <label><input type="radio" name="vr-contact" value="phone"> Phone</label>
+      </div>
+      <div class="contact-inputs"></div>
+      <div class="error" aria-live="polite"></div>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button class="btn" data-action="download" disabled>Download</button>
+      <button class="btn" data-action="upload" disabled>Upload</button>
+    </div>
+
+    <div class="success" role="status" aria-live="polite"></div>
+  </div>
+`;
 
   if (shadow) {
     shadow.appendChild(tpl.content.cloneNode(true));
