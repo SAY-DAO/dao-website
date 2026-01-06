@@ -3675,6 +3675,29 @@ h6 {
   }
 }
 
+/* Apply these styles to the card container */
+.faq-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent
+    linear-gradient(45deg, rgba(255, 173, 51, 0.884), transparent);
+  pointer-events: none; /* This ensures the gradient doesn't interfere with card content */
+  z-index: -1; /* This ensures the gradient is behind the content of the card */
+  transition: background 0.5s ease; /* Smooth transition for the gradient effect */
+}
 
+/* When the color is added via JS, we override the gradient's colors */
+.faq-item.has-color::after {
+  background: transparent linear-gradient(45deg, var(--card-color), transparent);
+}
 
-
+/* Add a vertical line to the right side of the card */
+.faq-item {
+  overflow: hidden;
+  position: relative;
+  padding-right: 10px; /* Add some padding to prevent content from touching the line */
+}

@@ -1,8 +1,3 @@
-/* faq-app.js
-   External JS to load `faqs.json` and render the FAQ accordion.
-   Expects an HTML container with id="faqAccordion" and Bootstrap collapse available.
-*/
-
 (function () {
   "use strict";
 
@@ -20,12 +15,24 @@
   function createFaqCard(item, idx) {
     const qId = `heading-${idx}`;
     const collapseId = `collapse-${idx}`;
+    const color = item.color || "#FF5733"; // Default color if no color is provided
 
-    return `\n  <div class="card faq-item mb-2" itemscope itemprop="mainEntity" itemtype="https://saydao.org/Question">\n    <div class="card-header" id="${qId}">\n      <h5 class="mb-0">\n        <button class="btn btn-link collapsed text-right" type="button" data-toggle="collapse"\n          data-target="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}" itemprop="name">${escapeHtml(
+    return `
+      <div class="card faq-item mb-2" itemscope itemprop="mainEntity" itemtype="https://saydao.org/Question" style="border-right: 10px solid ${color};">
+        <div class="card-header" id="${qId}">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed text-right" type="button" data-toggle="collapse"
+              data-target="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}" itemprop="name">${escapeHtml(
       item.question
-    )}</button>\n      </h5>\n    </div>\n    <div id="${collapseId}" class="collapse" aria-labelledby="${qId}" data-parent="#faqAccordion">\n      <div class="card-body" itemscope itemprop="acceptedAnswer" itemtype="https://saydao.org/Answer">\n        <div itemprop="text">${escapeHtml(
-      item.answer
-    )}</div>\n      </div>\n    </div>\n  </div>`;
+    )}</button>
+          </h5>
+        </div>
+        <div id="${collapseId}" class="collapse" aria-labelledby="${qId}" data-parent="#faqAccordion">
+          <div class="card-body" itemscope itemprop="acceptedAnswer" itemtype="https://saydao.org/Answer">
+            <div itemprop="text">${escapeHtml(item.answer)}</div>
+          </div>
+        </div>
+      </div>`;
   }
 
   function renderAll(faqs) {
