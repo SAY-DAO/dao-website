@@ -7,7 +7,7 @@
   window.__voiceRecorderWidgetLoaded = true;
 
   const cfg = window.voiceRecorderConfig || {};
-  const uploadUrl = cfg.uploadUrl || "/upload";
+  const uploadUrl = cfg.uploadUrl;
   const position = cfg.position === "left" ? "left" : "right";
 
   // Host container (outside page flow)
@@ -108,7 +108,7 @@
       color: var(--vr-ink);
     }
 
-    audio { width:100%; margin-top:10px; background:linear-gradient(180deg,#fff,#fbfdff); border-radius:6px; border:1px solid rgba(190,238,255,0.08); padding:6px; }
+    audio { width:100%; margin-top:10px; background:linear-gradient(180deg,#fff,#fbfdff); border-radius:6px; border:1px solid rgba(190,238,255,0.08);  }
 
     .status { font-size:13px; color: var(--vr-accent-3); margin-top:8px; }
     .hint { font-size:12px; color: var(--vr-muted); margin-top:8px; }
@@ -375,6 +375,8 @@
     const checked = root.querySelector('input[name="vr-contact"]:checked');
     const method = checked ? checked.value : null;
     let contactValue = "";
+
+    const form = new FormData();
     if (method === "email") {
       const v = contactInputs.querySelector("input")
         ? contactInputs.querySelector("input").value.trim()
@@ -387,6 +389,7 @@
         return;
       }
       contactValue = v;
+      form.append("email", contactValue);
     } else if (method === "phone") {
       const v = contactInputs.querySelector("input")
         ? contactInputs.querySelector("input").value.trim()
@@ -399,24 +402,32 @@
         return;
       }
       contactValue = v;
+      form.append("phoneNumber", contactValue);
     }
     if (errorEl) errorEl.style.display = "none";
     setStatus("uploading...");
     uploadBtn.disabled = true;
     downloadBtn.disabled = true;
     try {
-      const form = new FormData();
       const ext =
         mediaRecorder &&
         mediaRecorder.mimeType &&
         mediaRecorder.mimeType.includes("ogg")
           ? "ogg"
           : "webm";
-      form.append("file", audioBlob, `voice-${Date.now()}.${ext}`);
-      form.append("contact_method", method || "none");
-      form.append("contact_value", contactValue || "");
-      form.append("timestamp", Date.now());
-      const res = await fetch(uploadUrl, { method: "POST", body: form });
+      form.append("feedBackVoiceFile", audioBlob, `voice-${Date.now()}.${ext}`);
+      console.log(audioBlob);
+
+      const res = await fetch(uploadUrl, {
+        method: "POST",
+        headers: {
+          // "Content-Type": "multipart/form-data",
+          // "Content-Type": "application/json",
+          // Accept: "application/json",
+        },
+        body: form,
+      });
+
       if (!res.ok) throw new Error("Upload failed: " + res.status);
       const json = await res.json();
       if (successEl) {
