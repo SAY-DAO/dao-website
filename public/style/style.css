@@ -3701,3 +3701,27 @@ h6 {
   position: relative;
   padding-right: 10px; /* Add some padding to prevent content from touching the line */
 }
+
+.top-alert {
+  direction: rtl;
+  text-align: center;
+  margin: 0;
+  padding: 10px 16px;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.8;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.top-alert strong {
+  margin-left: 6px;
+}
+
+@media (min-width: 768px) {
+  .top-alert {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+}
